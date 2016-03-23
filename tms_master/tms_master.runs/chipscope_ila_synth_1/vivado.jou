@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Vivado v2014.4 (64-bit)
+# SW Build 1071353 on Tue Nov 18 18:24:04 MST 2014
+# IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+# Start of session at: Fri Nov 20 16:49:52 2015
+# Process ID: 1364
+# Log file: D:/Devel/projekty/TMS/lnls_out/tms_master/tms_master.runs/chipscope_ila_synth_1/chipscope_ila.vds
+# Journal file: D:/Devel/projekty/TMS/lnls_out/tms_master/tms_master.runs/chipscope_ila_synth_1\vivado.jou
+#-----------------------------------------------------------
+source chipscope_ila.tcl

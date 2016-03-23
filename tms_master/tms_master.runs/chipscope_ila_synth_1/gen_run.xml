@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="chipscope_ila_synth_1" LaunchPart="xc7a200tffg1156-1" LaunchTime="1448034583">
+  <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/chipscope_ila_synth_1/constrs_in.xml"/>
+  <File Type="RDS-DCP" Name="chipscope_ila.dcp"/>
+  <File Type="RUN-SRCS" Name="$PDATADIR/runs/chipscope_ila_synth_1/sources.xml"/>
+  <File Type="RDS-UTIL-PB" Name="chipscope_ila_utilization_synth.pb"/>
+  <File Type="RUN-STRAT" Name="$PDATADIR/runs/chipscope_ila_synth_1/chipscope_ila_synth_1.psg"/>
+  <File Type="PA-TCL" Name="chipscope_ila.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="chipscope_ila_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="chipscope_ila.vds"/>
+  <File Type="RDS-UTIL" Name="chipscope_ila_utilization_synth.rpt"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="chipscope_ila_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="chipscope_ila_timing_summary_synth.pb"/>
+  <File Type="VDS-HWDEF" Name="chipscope_ila.hwdef"/>
+  <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/chipscope_ila">
+    <File Path="$PSRCDIR/sources_1/ip/chipscope_ila/chipscope_ila.xci">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../import/chipscope_ila.xci"/>
+        <Attr Name="ImportTime" Val="1446456493"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="chipscope_ila"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/chipscope_ila">
+    <File Path="$PSRCDIR/sources_1/ip/chipscope_ila/chipscope_ila.xci">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../import/chipscope_ila.xci"/>
+        <Attr Name="ImportTime" Val="1446456493"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="chipscope_ila"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2014"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

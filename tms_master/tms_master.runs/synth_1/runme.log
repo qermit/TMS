@@ -1,0 +1,1820 @@
+
+*** Running vivado
+    with args -log dbe_bpm_dsp.vds -m64 -mode batch -messageDb vivado.pb -source dbe_bpm_dsp.tcl
+
+
+****** Vivado v2014.4 (64-bit)
+  **** SW Build 1071353 on Tue Nov 18 18:24:04 MST 2014
+  **** IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+
+source dbe_bpm_dsp.tcl
+# set_param gui.test TreeTableDev
+# debug::add_scope template.lib 1
+# set_msg_config -id {HDL 9-1061} -limit 100000
+# set_msg_config -id {HDL 9-1654} -limit 100000
+# set_msg_config -id {Synth 8-256} -limit 10000
+# set_msg_config -id {Synth 8-638} -limit 10000
+# create_project -in_memory -part xc7a200tffg1156-1
+# set_param project.compositeFile.enableAutoGeneration 0
+# set_param synth.vivado.isSynthRun true
+# set_property webtalk.parent_dir D:/Devel/projekty/TMS/lnls_out/tms_master/tms_master.cache/wt [current_project]
+# set_property parent.project_path D:/Devel/projekty/TMS/lnls_out/tms_master/tms_master.xpr [current_project]
+# set_property default_lib xil_defaultlib [current_project]
+# set_property target_language VHDL [current_project]
+# add_files -quiet D:/Devel/projekty/TMS/lnls_out/tms_master/tms_master.runs/chipscope_ila_synth_1/chipscope_ila.dcp
+# set_property used_in_implementation false [get_files D:/Devel/projekty/TMS/lnls_out/tms_master/tms_master.runs/chipscope_ila_synth_1/chipscope_ila.dcp]
+# add_files -quiet D:/Devel/projekty/TMS/lnls_out/tms_master/tms_master.runs/vio_boot_synth_1/vio_boot.dcp
+# set_property used_in_implementation false [get_files D:/Devel/projekty/TMS/lnls_out/tms_master/tms_master.runs/vio_boot_synth_1/vio_boot.dcp]
+# read_vhdl -library xil_defaultlib {
+#   D:/Devel/projekty/TMS/lnls_out/import/genram_pkg.vhd
+#   D:/Devel/projekty/TMS/lnls_out/import/wishbone_pkg.vhd
+#   D:/Devel/projekty/TMS/lnls_out/import/simple_uart_pkg.vhd
+#   D:/Devel/projekty/TMS/lnls_out/import/wb_stream_pkg.vhd
+#   D:/Devel/projekty/TMS/lnls_out/import/wb_slave_adapter.vhd
+#   D:/Devel/projekty/TMS/lnls_out/import/uart_baud_gen.vhd
+#   D:/Devel/projekty/TMS/lnls_out/import/uart_async_tx.vhd
+#   D:/Devel/projekty/TMS/lnls_out/import/uart_async_rx.vhd
+#   D:/Devel/projekty/TMS/lnls_out/import/simple_uart_wb.vhd
+#   D:/Devel/projekty/TMS/lnls_out/import/generic_sync_fifo.vhd
+#   D:/Devel/projekty/TMS/lnls_out/import/gencores_pkg.vhd
+#   D:/Devel/projekty/TMS/lnls_out/import/gc_sync_ffs.vhd
+#   D:/Devel/projekty/TMS/lnls_out/import/xwb_crossbar.vhd
+#   D:/Devel/projekty/TMS/lnls_out/import/wr_fabric_pkg.vhd
+#   D:/Devel/projekty/TMS/lnls_out/import/wb_tics.vhd
+#   D:/Devel/projekty/TMS/lnls_out/import/wb_stream_generic_pkg.vhd
+#   D:/Devel/projekty/TMS/lnls_out/import/wb_simple_uart.vhd
+#   D:/Devel/projekty/TMS/lnls_out/import/wb_gpio_port.vhd
+#   D:/Devel/projekty/TMS/lnls_out/import/sdb_rom.vhd
+#   D:/Devel/projekty/TMS/lnls_out/import/memory_loader_pkg.vhd
+#   D:/Devel/projekty/TMS/lnls_out/import/fmc_adc_pkg.vhd
+#   D:/Devel/projekty/TMS/lnls_out/import/acq_core_pkg.vhd
+#   D:/Devel/projekty/TMS/lnls_out/import/xwb_tics.vhd
+#   D:/Devel/projekty/TMS/lnls_out/import/xwb_simple_uart.vhd
+#   D:/Devel/projekty/TMS/lnls_out/import/xwb_sdb_crossbar.vhd
+#   D:/Devel/projekty/TMS/lnls_out/import/xwb_gpio_port.vhd
+#   D:/Devel/projekty/TMS/lnls_out/import/spi2wbm_pkg.vhd
+#   D:/Devel/projekty/TMS/lnls_out/import/generic_dpram_sameclock.vhd
+#   D:/Devel/projekty/TMS/lnls_out/import/generic_dpram_dualclock.vhd
+#   D:/Devel/projekty/TMS/lnls_out/import/dbe_wishbone_pkg.vhd
+#   D:/Devel/projekty/TMS/lnls_out/import/wb_dbe_periph.vhd
+#   D:/Devel/projekty/TMS/lnls_out/import/spi2wbm_link.vhd
+#   D:/Devel/projekty/TMS/lnls_out/import/generic_dpram.vhd
+#   D:/Devel/projekty/TMS/lnls_out/import/fmc_general_pkg.vhd
+#   D:/Devel/projekty/TMS/lnls_out/import/bpm_pcie_a7_const_pkg.vhd
+#   D:/Devel/projekty/TMS/lnls_out/import/xwb_dpram.vhd
+#   D:/Devel/projekty/TMS/lnls_out/import/xwb_dbe_periph.vhd
+#   D:/Devel/projekty/TMS/lnls_out/import/sys_pll.vhd
+#   D:/Devel/projekty/TMS/lnls_out/import/spi_multiplexer.vhd
+#   D:/Devel/projekty/TMS/lnls_out/import/spi2wbm_link_top.vhd
+#   D:/Devel/projekty/TMS/lnls_out/import/project.vhd
+#   D:/Devel/projekty/TMS/lnls_out/import/position_calc_uvx_const_pkg.vhd
+#   D:/Devel/projekty/TMS/lnls_out/import/fmc_dio5chttl.vhd
+#   D:/Devel/projekty/TMS/lnls_out/import/dsp_cores_pkg.vhd
+#   D:/Devel/projekty/TMS/lnls_out/import/dbe_common_pkg.vhd
+#   D:/Devel/projekty/TMS/lnls_out/import/clk_gen.vhd
+#   D:/Devel/projekty/TMS/lnls_out/import/bpm_pcie_a7_pkg.vhd
+#   D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd
+# }
+# read_xdc D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.xdc
+# set_property used_in_implementation false [get_files D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.xdc]
+# catch { write_hwdef -file dbe_bpm_dsp.hwdef }
+INFO: [Vivado_Tcl 4-279] hardware handoff file cannot be generated as there is no block diagram instance in the design
+# synth_design -top dbe_bpm_dsp -part xc7a200tffg1156-1
+Command: synth_design -top dbe_bpm_dsp -part xc7a200tffg1156-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a200t'
+INFO: [Common 17-1223] The version limit for your license is '2014.12' and will expire in -324 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 241.051 ; gain = 80.340
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-1565] actual for formal port probe3 is neither a static name nor a globally static expression [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:3520]
+WARNING: [Synth 8-1565] actual for formal port probe_in0 is neither a static name nor a globally static expression [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:3563]
+WARNING: [Synth 8-2519] partially associated formal probe_out0 cannot have actual OPEN [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:3568]
+INFO: [Synth 8-638] synthesizing module 'dbe_bpm_dsp' [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:328]
+INFO: [Synth 8-3491] module 'clk_gen' declared at 'D:/Devel/projekty/TMS/lnls_out/import/clk_gen.vhd:7' bound to instance 'cmp_clk_gen' of component 'clk_gen' [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1197]
+INFO: [Synth 8-638] synthesizing module 'clk_gen' [D:/Devel/projekty/TMS/lnls_out/import/clk_gen.vhd:16]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter DIFF_TERM bound to: 0 - type: bool 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-113] binding component instance 'cpm_ibufgds_clk_gen' to cell 'IBUFGDS' [D:/Devel/projekty/TMS/lnls_out/import/clk_gen.vhd:26]
+INFO: [Synth 8-113] binding component instance 'cmp_bufg_clk_gen' to cell 'BUFG' [D:/Devel/projekty/TMS/lnls_out/import/clk_gen.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'clk_gen' (1#1) [D:/Devel/projekty/TMS/lnls_out/import/clk_gen.vhd:16]
+	Parameter g_clkin_period bound to: 8.000000 - type: float 
+	Parameter g_divclk_divide bound to: 5 - type: integer 
+	Parameter g_clkbout_mult_f bound to: 32 - type: integer 
+	Parameter g_clk0_divide_f bound to: 8 - type: integer 
+	Parameter g_clk1_divide bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'sys_pll' declared at 'D:/Devel/projekty/TMS/lnls_out/import/sys_pll.vhd:26' bound to instance 'cmp_sys_pll_inst' of component 'sys_pll' [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1206]
+INFO: [Synth 8-638] synthesizing module 'sys_pll__parameterized0' [D:/Devel/projekty/TMS/lnls_out/import/sys_pll.vhd:50]
+	Parameter g_clkin_period bound to: 8.000000 - type: float 
+	Parameter g_divclk_divide bound to: 5 - type: integer 
+	Parameter g_clkbout_mult_f bound to: 32 - type: integer 
+	Parameter g_ref_jitter bound to: 0.010000 - type: float 
+	Parameter g_clk0_divide_f bound to: 8 - type: integer 
+	Parameter g_clk1_divide bound to: 4 - type: integer 
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT bound to: 32 - type: integer 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKIN1_PERIOD bound to: 8.000000 - type: float 
+	Parameter CLKIN2_PERIOD bound to: 8.000000 - type: float 
+	Parameter CLKOUT0_DIVIDE bound to: 8 - type: integer 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT1_DIVIDE bound to: 4 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT2_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT3_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT4_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: float 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 5 - type: integer 
+	Parameter IS_CLKINSEL_INVERTED bound to: 1'b0 
+	Parameter IS_PWRDWN_INVERTED bound to: 1'b0 
+	Parameter IS_RST_INVERTED bound to: 1'b0 
+	Parameter REF_JITTER1 bound to: 0.010000 - type: float 
+	Parameter REF_JITTER2 bound to: 0.010000 - type: float 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-113] binding component instance 'cmp_sys_pll' to cell 'PLLE2_ADV' [D:/Devel/projekty/TMS/lnls_out/import/sys_pll.vhd:60]
+INFO: [Synth 8-113] binding component instance 'cmp_clkf_bufg' to cell 'BUFG' [D:/Devel/projekty/TMS/lnls_out/import/sys_pll.vhd:128]
+INFO: [Synth 8-113] binding component instance 'cmp_clkout0_buf' to cell 'BUFG' [D:/Devel/projekty/TMS/lnls_out/import/sys_pll.vhd:134]
+INFO: [Synth 8-113] binding component instance 'cmp_clkout1_buf' to cell 'BUFG' [D:/Devel/projekty/TMS/lnls_out/import/sys_pll.vhd:140]
+INFO: [Synth 8-256] done synthesizing module 'sys_pll__parameterized0' (2#1) [D:/Devel/projekty/TMS/lnls_out/import/sys_pll.vhd:50]
+	Parameter g_num_masters bound to: 1 - type: integer 
+	Parameter g_num_slaves bound to: 6 - type: integer 
+	Parameter g_registered bound to: 1 - type: bool 
+	Parameter g_wraparound bound to: 1 - type: bool 
+	Parameter g_layout bound to: 3072'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011001010001000000000000000000000000000000010000000000000001000000000000000000100000000101010000100100000001011101000110110101110011001011010110110101100001011100110111010001100101011100100010000000100000001000000010000000100000001000000010000000100000001000001000000001100100011000100110010101011111011000100111000001101101010111110110010001110011011100000010000000100000001000000010000000100000xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx010101100100100101010110010000010100010001001111001000000010000000000000000000100000000101000100001000000001010100001001000000010111000001101101011010010110010101100100011110100110100101101011001000000010000000100000001000000010000000100000001000001000001000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000010000001000000000000000000000001000000000000000000000000000000000000011100000000000000000000000000000000000000000011000100000000000000000000000000000000000000000000000000000000001100010000000011111111000000000000000000000000000000000000000000000000000001100101000100110101101010100110101110010101000000000000000000000000000000010010000000010010000000110000010101000111010100110100100101011111010001110101000001001001010011110101111100110011001100100010000000100000001000000010000000100000001000000010000000100000000000010000000000000000000000000000000000000000001101110000010000000000000000000000000000000000000000000000000000110111000000000000000000000000000000000000000000000000000000000011011100001111111111110000000000000000000000000000000000000000000000000000011001010001111011101111000010110001100110000000000000000000000000000000000100100000000100100000010100010001010101110100001000110100001011010100001001110010011010010110010001100111011001010010110101000111010100110100100100100000001000000010000000100000001000000000001000000000000000010000000100000000000000000000000000000000000001110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111111111111100000000000000000000000000000000000000000000000011001110010000100110011011001111111010110101001000000000000000000000000000000001001000000001001000000011000001010101011101000010001101000010110101000010011011000110111101100011011010110101001001000001010011010010000000100000001000000010000000100000001000000010000000000001 
+	Parameter g_sdb_addr bound to: 32'b00000000001100000000000000000000 
+INFO: [Synth 8-3491] module 'xwb_sdb_crossbar' declared at 'D:/Devel/projekty/TMS/lnls_out/import/xwb_sdb_crossbar.vhd:6' bound to instance 'cmp_interconnect' of component 'xwb_sdb_crossbar' [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+INFO: [Synth 8-638] synthesizing module 'xwb_sdb_crossbar__parameterized0' [D:/Devel/projekty/TMS/lnls_out/import/xwb_sdb_crossbar.vhd:25]
+	Parameter g_num_masters bound to: 1 - type: integer 
+	Parameter g_num_slaves bound to: 6 - type: integer 
+	Parameter g_registered bound to: 1 - type: bool 
+	Parameter g_wraparound bound to: 1 - type: bool 
+	Parameter g_layout bound to: 3072'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011001010001000000000000000000000000000000010000000000000001000000000000000000100000000101010000100100000001011101000110110101110011001011010110110101100001011100110111010001100101011100100010000000100000001000000010000000100000001000000010000000100000001000001000000001100100011000100110010101011111011000100111000001101101010111110110010001110011011100000010000000100000001000000010000000100000xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx010101100100100101010110010000010100010001001111001000000010000000000000000000100000000101000100001000000001010100001001000000010111000001101101011010010110010101100100011110100110100101101011001000000010000000100000001000000010000000100000001000001000001000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000010000001000000000000000000000001000000000000000000000000000000000000011100000000000000000000000000000000000000000011000100000000000000000000000000000000000000000000000000000000001100010000000011111111000000000000000000000000000000000000000000000000000001100101000100110101101010100110101110010101000000000000000000000000000000010010000000010010000000110000010101000111010100110100100101011111010001110101000001001001010011110101111100110011001100100010000000100000001000000010000000100000001000000010000000100000000000010000000000000000000000000000000000000000001101110000010000000000000000000000000000000000000000000000000000110111000000000000000000000000000000000000000000000000000000000011011100001111111111110000000000000000000000000000000000000000000000000000011001010001111011101111000010110001100110000000000000000000000000000000000100100000000100100000010100010001010101110100001000110100001011010100001001110010011010010110010001100111011001010010110101000111010100110100100100100000001000000010000000100000001000000000001000000000000000010000000100000000000000000000000000000000000001110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111111111111100000000000000000000000000000000000000000000000011001110010000100110011011001111111010110101001000000000000000000000000000000001001000000001001000000011000001010101011101000010001101000010110101000010011011000110111101100011011010110101001001000001010011010010000000100000001000000010000000100000001000000010000000000001 
+	Parameter g_sdb_addr bound to: 3145728 - type: integer 
+	Parameter g_layout bound to: 3072'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011001010001000000000000000000000000000000010000000000000001000000000000000000100000000101010000100100000001011101000110110101110011001011010110110101100001011100110111010001100101011100100010000000100000001000000010000000100000001000000010000000100000001000001000000001100100011000100110010101011111011000100111000001101101010111110110010001110011011100000010000000100000001000000010000000100000xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx010101100100100101010110010000010100010001001111001000000010000000000000000000100000000101000100001000000001010100001001000000010111000001101101011010010110010101100100011110100110100101101011001000000010000000100000001000000010000000100000001000001000001000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000010000001000000000000000000000001000000000000000000000000000000000000011100000000000000000000000000000000000000000011000100000000000000000000000000000000000000000000000000000000001100010000000011111111000000000000000000000000000000000000000000000000000001100101000100110101101010100110101110010101000000000000000000000000000000010010000000010010000000110000010101000111010100110100100101011111010001110101000001001001010011110101111100110011001100100010000000100000001000000010000000100000001000000010000000100000000000010000000000000000000000000000000000000000001101110000010000000000000000000000000000000000000000000000000000110111000000000000000000000000000000000000000000000000000000000011011100001111111111110000000000000000000000000000000000000000000000000000011001010001111011101111000010110001100110000000000000000000000000000000000100100000000100100000010100010001010101110100001000110100001011010100001001110010011010010110010001100111011001010010110101000111010100110100100100100000001000000010000000100000001000000000001000000000000000010000000100000000000000000000000000000000000001110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111111111111100000000000000000000000000000000000000000000000011001110010000100110011011001111111010110101001000000000000000000000000000000001001000000001001000000011000001010101011101000010001101000010110101000010011011000110111101100011011010110101001001000001010011010010000000100000001000000010000000100000001000000010000000000001 
+	Parameter g_bus_end bound to: 64'b0000000000000000000000000000000000000000001111111111111111111111 
+INFO: [Synth 8-3491] module 'sdb_rom' declared at 'D:/Devel/projekty/TMS/lnls_out/import/sdb_rom.vhd:6' bound to instance 'rom' of component 'sdb_rom' [D:/Devel/projekty/TMS/lnls_out/import/xwb_sdb_crossbar.vhd:168]
+INFO: [Synth 8-638] synthesizing module 'sdb_rom__parameterized0' [D:/Devel/projekty/TMS/lnls_out/import/sdb_rom.vhd:16]
+	Parameter g_layout bound to: 3072'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011001010001000000000000000000000000000000010000000000000001000000000000000000100000000101010000100100000001011101000110110101110011001011010110110101100001011100110111010001100101011100100010000000100000001000000010000000100000001000000010000000100000001000001000000001100100011000100110010101011111011000100111000001101101010111110110010001110011011100000010000000100000001000000010000000100000xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx010101100100100101010110010000010100010001001111001000000010000000000000000000100000000101000100001000000001010100001001000000010111000001101101011010010110010101100100011110100110100101101011001000000010000000100000001000000010000000100000001000001000001000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000010000001000000000000000000000001000000000000000000000000000000000000011100000000000000000000000000000000000000000011000100000000000000000000000000000000000000000000000000000000001100010000000011111111000000000000000000000000000000000000000000000000000001100101000100110101101010100110101110010101000000000000000000000000000000010010000000010010000000110000010101000111010100110100100101011111010001110101000001001001010011110101111100110011001100100010000000100000001000000010000000100000001000000010000000100000000000010000000000000000000000000000000000000000001101110000010000000000000000000000000000000000000000000000000000110111000000000000000000000000000000000000000000000000000000000011011100001111111111110000000000000000000000000000000000000000000000000000011001010001111011101111000010110001100110000000000000000000000000000000000100100000000100100000010100010001010101110100001000110100001011010100001001110010011010010110010001100111011001010010110101000111010100110100100100100000001000000010000000100000001000000000001000000000000000010000000100000000000000000000000000000000000001110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111111111111100000000000000000000000000000000000000000000000011001110010000100110011011001111111010110101001000000000000000000000000000000001001000000001001000000011000001010101011101000010001101000010110101000010011011000110111101100011011010110101001001000001010011010010000000100000001000000010000000100000001000000010000000000001 
+	Parameter g_bus_end bound to: 64'b0000000000000000000000000000000000000000001111111111111111111111 
+INFO: [Synth 8-256] done synthesizing module 'sdb_rom__parameterized0' (3#1) [D:/Devel/projekty/TMS/lnls_out/import/sdb_rom.vhd:16]
+	Parameter g_num_masters bound to: 1 - type: integer 
+	Parameter g_num_slaves bound to: 7 - type: integer 
+	Parameter g_registered bound to: 1 - type: bool 
+	Parameter g_address bound to: 224'b00000000001100000000000000000000111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111000000000011000100000000000000000000000000110111000000000000000000000000000000000000000000000000 
+	Parameter g_mask bound to: 224'b00000000001111111111111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111000000000000000000111111111100000000000000000000001111111100000000000000 
+INFO: [Synth 8-3491] module 'xwb_crossbar' declared at 'D:/Devel/projekty/TMS/lnls_out/import/xwb_crossbar.vhd:53' bound to instance 'crossbar' of component 'xwb_crossbar' [D:/Devel/projekty/TMS/lnls_out/import/xwb_sdb_crossbar.vhd:177]
+INFO: [Synth 8-638] synthesizing module 'xwb_crossbar__parameterized0' [D:/Devel/projekty/TMS/lnls_out/import/xwb_crossbar.vhd:72]
+	Parameter g_num_masters bound to: 1 - type: integer 
+	Parameter g_num_slaves bound to: 7 - type: integer 
+	Parameter g_registered bound to: 1 - type: bool 
+	Parameter g_address bound to: 224'b00000000001100000000000000000000111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111000000000011000100000000000000000000000000110111000000000000000000000000000000000000000000000000 
+	Parameter g_mask bound to: 224'b00000000001111111111111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111111111000000000000000000111111111100000000000000000000001111111100000000000000 
+INFO: [Synth 8-63] RTL assertion: "Mapping slave #0[0x0/0x3fc000]" [D:/Devel/projekty/TMS/lnls_out/import/xwb_crossbar.vhd:96]
+INFO: [Synth 8-63] RTL assertion: "Mapping slave #1[0x370000/0x3ff000]" [D:/Devel/projekty/TMS/lnls_out/import/xwb_crossbar.vhd:96]
+INFO: [Synth 8-63] RTL assertion: "Mapping slave #2[0x310000/0x3fff00]" [D:/Devel/projekty/TMS/lnls_out/import/xwb_crossbar.vhd:96]
+INFO: [Synth 8-63] RTL assertion: "Mapping slave #3[0xffffffff/0x0]" [D:/Devel/projekty/TMS/lnls_out/import/xwb_crossbar.vhd:96]
+INFO: [Synth 8-63] RTL assertion: "Mapping slave #4[0xffffffff/0x0]" [D:/Devel/projekty/TMS/lnls_out/import/xwb_crossbar.vhd:96]
+INFO: [Synth 8-63] RTL assertion: "Mapping slave #5[0xffffffff/0x0]" [D:/Devel/projekty/TMS/lnls_out/import/xwb_crossbar.vhd:96]
+INFO: [Synth 8-63] RTL assertion: "Mapping slave #6[0x300000/0x3ffe00]" [D:/Devel/projekty/TMS/lnls_out/import/xwb_crossbar.vhd:96]
+INFO: [Synth 8-256] done synthesizing module 'xwb_crossbar__parameterized0' (4#1) [D:/Devel/projekty/TMS/lnls_out/import/xwb_crossbar.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'xwb_sdb_crossbar__parameterized0' (5#1) [D:/Devel/projekty/TMS/lnls_out/import/xwb_sdb_crossbar.vhd:25]
+	Parameter g_i2c_addr bound to: 40 - type: integer 
+	Parameter g_modules bound to: 4 - type: integer 
+	Parameter g_slaves_per_module bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'spi_multiplexer' declared at 'D:/Devel/projekty/TMS/lnls_out/import/spi_multiplexer.vhd:34' bound to instance 'cmp_spi_multiplexer' of component 'spi_multiplexer' [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1339]
+INFO: [Synth 8-638] synthesizing module 'spi_multiplexer__parameterized0' [D:/Devel/projekty/TMS/lnls_out/import/spi_multiplexer.vhd:59]
+	Parameter g_i2c_addr bound to: 40 - type: integer 
+	Parameter g_modules bound to: 4 - type: integer 
+	Parameter g_slaves_per_module bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'spi_multiplexer__parameterized0' (6#1) [D:/Devel/projekty/TMS/lnls_out/import/spi_multiplexer.vhd:59]
+INFO: [Synth 8-3491] module 'spi2wbm_link_top' declared at 'D:/Devel/projekty/TMS/lnls_out/import/spi2wbm_link_top.vhd:9' bound to instance 'cmp_spi2wbm_link_top' of component 'spi2wbm_link_top' [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1363]
+INFO: [Synth 8-638] synthesizing module 'spi2wbm_link_top' [D:/Devel/projekty/TMS/lnls_out/import/spi2wbm_link_top.vhd:38]
+	Parameter g_ma_interface_mode bound to: 1'b1 
+	Parameter g_ma_address_granularity bound to: 1'b0 
+INFO: [Synth 8-4472] Detected and applied attribute keep = true [D:/Devel/projekty/TMS/lnls_out/import/spi2wbm_link_top.vhd:45]
+INFO: [Synth 8-4472] Detected and applied attribute keep = true [D:/Devel/projekty/TMS/lnls_out/import/spi2wbm_link_top.vhd:46]
+INFO: [Synth 8-4472] Detected and applied attribute keep = true [D:/Devel/projekty/TMS/lnls_out/import/spi2wbm_link_top.vhd:48]
+INFO: [Synth 8-4472] Detected and applied attribute keep = true [D:/Devel/projekty/TMS/lnls_out/import/spi2wbm_link_top.vhd:49]
+INFO: [Synth 8-3491] module 'spi2wbm_link' declared at 'D:/Devel/projekty/TMS/lnls_out/import/spi2wbm_link.vhd:8' bound to instance 'U_spi_link' of component 'spi2wbm_link' [D:/Devel/projekty/TMS/lnls_out/import/spi2wbm_link_top.vhd:59]
+INFO: [Synth 8-638] synthesizing module 'spi2wbm_link' [D:/Devel/projekty/TMS/lnls_out/import/spi2wbm_link.vhd:36]
+	Parameter g_debug bound to: 0 - type: bool 
+INFO: [Synth 8-256] done synthesizing module 'spi2wbm_link' (7#1) [D:/Devel/projekty/TMS/lnls_out/import/spi2wbm_link.vhd:36]
+	Parameter g_master_use_struct bound to: 0 - type: bool 
+	Parameter g_master_mode bound to: 1'b1 
+	Parameter g_master_granularity bound to: 1'b0 
+	Parameter g_slave_use_struct bound to: 0 - type: bool 
+	Parameter g_slave_mode bound to: 1'b0 
+	Parameter g_slave_granularity bound to: 1'b0 
+INFO: [Synth 8-3491] module 'wb_slave_adapter' declared at 'D:/Devel/projekty/TMS/lnls_out/import/wb_slave_adapter.vhd:11' bound to instance 'cmp_spi_slave_adapter' of component 'wb_slave_adapter' [D:/Devel/projekty/TMS/lnls_out/import/spi2wbm_link_top.vhd:82]
+INFO: [Synth 8-638] synthesizing module 'wb_slave_adapter__parameterized0' [D:/Devel/projekty/TMS/lnls_out/import/wb_slave_adapter.vhd:65]
+	Parameter g_master_use_struct bound to: 0 - type: bool 
+	Parameter g_master_mode bound to: 1'b1 
+	Parameter g_master_granularity bound to: 1'b0 
+	Parameter g_slave_use_struct bound to: 0 - type: bool 
+	Parameter g_slave_mode bound to: 1'b0 
+	Parameter g_slave_granularity bound to: 1'b0 
+INFO: [Synth 8-256] done synthesizing module 'wb_slave_adapter__parameterized0' (8#1) [D:/Devel/projekty/TMS/lnls_out/import/wb_slave_adapter.vhd:65]
+INFO: [Synth 8-256] done synthesizing module 'spi2wbm_link_top' (9#1) [D:/Devel/projekty/TMS/lnls_out/import/spi2wbm_link_top.vhd:38]
+	Parameter g_size bound to: 4096 - type: integer 
+	Parameter g_init_file bound to: (null) - type: string 
+	Parameter g_must_have_init_file bound to: 0 - type: bool 
+	Parameter g_slave1_interface_mode bound to: 1'b1 
+	Parameter g_slave2_interface_mode bound to: 1'b1 
+	Parameter g_slave1_granularity bound to: 1'b0 
+	Parameter g_slave2_granularity bound to: 1'b0 
+INFO: [Synth 8-3491] module 'xwb_dpram_raw' declared at 'D:/Devel/projekty/TMS/lnls_out/import/xwb_dpram.vhd:35' bound to instance 'cmp_ram' of component 'xwb_dpram_raw' [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1510]
+INFO: [Synth 8-638] synthesizing module 'xwb_dpram_raw__parameterized0' [D:/Devel/projekty/TMS/lnls_out/import/xwb_dpram.vhd:63]
+	Parameter g_size bound to: 4096 - type: integer 
+	Parameter g_init_file bound to: (null) - type: string 
+	Parameter g_must_have_init_file bound to: 0 - type: bool 
+	Parameter g_slave1_interface_mode bound to: 1'b1 
+	Parameter g_slave2_interface_mode bound to: 1'b1 
+	Parameter g_slave1_granularity bound to: 1'b0 
+	Parameter g_slave2_granularity bound to: 1'b0 
+	Parameter g_master_use_struct bound to: 1 - type: bool 
+	Parameter g_master_mode bound to: 1'b1 
+	Parameter g_master_granularity bound to: 1'b1 
+	Parameter g_slave_use_struct bound to: 1 - type: bool 
+	Parameter g_slave_mode bound to: 1'b1 
+	Parameter g_slave_granularity bound to: 1'b0 
+INFO: [Synth 8-3491] module 'wb_slave_adapter' declared at 'D:/Devel/projekty/TMS/lnls_out/import/wb_slave_adapter.vhd:11' bound to instance 'U_Adapter1' of component 'wb_slave_adapter' [D:/Devel/projekty/TMS/lnls_out/import/xwb_dpram.vhd:86]
+INFO: [Synth 8-638] synthesizing module 'wb_slave_adapter__parameterized2' [D:/Devel/projekty/TMS/lnls_out/import/wb_slave_adapter.vhd:65]
+	Parameter g_master_use_struct bound to: 1 - type: bool 
+	Parameter g_master_mode bound to: 1'b1 
+	Parameter g_master_granularity bound to: 1'b1 
+	Parameter g_slave_use_struct bound to: 1 - type: bool 
+	Parameter g_slave_mode bound to: 1'b1 
+	Parameter g_slave_granularity bound to: 1'b0 
+INFO: [Synth 8-256] done synthesizing module 'wb_slave_adapter__parameterized2' (9#1) [D:/Devel/projekty/TMS/lnls_out/import/wb_slave_adapter.vhd:65]
+	Parameter g_data_width bound to: 32 - type: integer 
+	Parameter g_size bound to: 4096 - type: integer 
+	Parameter g_with_byte_enable bound to: 1 - type: bool 
+	Parameter g_addr_conflict_resolution bound to: dont_care - type: string 
+	Parameter g_init_file bound to: (null) - type: string 
+	Parameter g_dual_clock bound to: 0 - type: bool 
+INFO: [Synth 8-3491] module 'generic_dpram' declared at 'D:/Devel/projekty/TMS/lnls_out/import/generic_dpram.vhd:39' bound to instance 'U_DPRAM' of component 'generic_dpram' [D:/Devel/projekty/TMS/lnls_out/import/xwb_dpram.vhd:118]
+INFO: [Synth 8-638] synthesizing module 'generic_dpram__parameterized0' [D:/Devel/projekty/TMS/lnls_out/import/generic_dpram.vhd:77]
+	Parameter g_data_width bound to: 32 - type: integer 
+	Parameter g_size bound to: 4096 - type: integer 
+	Parameter g_with_byte_enable bound to: 1 - type: bool 
+	Parameter g_addr_conflict_resolution bound to: dont_care - type: string 
+	Parameter g_init_file bound to: (null) - type: string 
+	Parameter g_dual_clock bound to: 0 - type: bool 
+	Parameter g_fail_if_file_not_found bound to: 1 - type: bool 
+	Parameter g_data_width bound to: 32 - type: integer 
+	Parameter g_size bound to: 4096 - type: integer 
+	Parameter g_with_byte_enable bound to: 1 - type: bool 
+	Parameter g_addr_conflict_resolution bound to: dont_care - type: string 
+	Parameter g_init_file bound to: (null) - type: string 
+	Parameter g_fail_if_file_not_found bound to: 1 - type: bool 
+INFO: [Synth 8-3491] module 'generic_dpram_sameclock' declared at 'D:/Devel/projekty/TMS/lnls_out/import/generic_dpram_sameclock.vhd:38' bound to instance 'U_RAM_SC' of component 'generic_dpram_sameclock' [D:/Devel/projekty/TMS/lnls_out/import/generic_dpram.vhd:129]
+INFO: [Synth 8-638] synthesizing module 'generic_dpram_sameclock__parameterized0' [D:/Devel/projekty/TMS/lnls_out/import/generic_dpram_sameclock.vhd:74]
+	Parameter g_data_width bound to: 32 - type: integer 
+	Parameter g_size bound to: 4096 - type: integer 
+	Parameter g_with_byte_enable bound to: 1 - type: bool 
+	Parameter g_addr_conflict_resolution bound to: dont_care - type: string 
+	Parameter g_init_file bound to: (null) - type: string 
+	Parameter g_fail_if_file_not_found bound to: 1 - type: bool 
+INFO: [Synth 8-256] done synthesizing module 'generic_dpram_sameclock__parameterized0' (10#1) [D:/Devel/projekty/TMS/lnls_out/import/generic_dpram_sameclock.vhd:74]
+INFO: [Synth 8-256] done synthesizing module 'generic_dpram__parameterized0' (11#1) [D:/Devel/projekty/TMS/lnls_out/import/generic_dpram.vhd:77]
+WARNING: [Synth 8-3848] Net slave1_out[int] in module/entity xwb_dpram_raw__parameterized0 does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/xwb_dpram.vhd:78]
+INFO: [Synth 8-256] done synthesizing module 'xwb_dpram_raw__parameterized0' (12#1) [D:/Devel/projekty/TMS/lnls_out/import/xwb_dpram.vhd:63]
+	Parameter g_interface_mode bound to: 1'b0 
+	Parameter g_address_granularity bound to: 1'b1 
+	Parameter g_cntr_period bound to: 100000 - type: integer 
+	Parameter g_num_leds bound to: 8 - type: integer 
+	Parameter g_num_buttons bound to: 8 - type: integer 
+	Parameter g_num_mlvds bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'xwb_dbe_periph' declared at 'D:/Devel/projekty/TMS/lnls_out/import/xwb_dbe_periph.vhd:9' bound to instance 'cmp_xwb_dbe_periph' of component 'xwb_dbe_periph' [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:2288]
+INFO: [Synth 8-638] synthesizing module 'xwb_dbe_periph__parameterized0' [D:/Devel/projekty/TMS/lnls_out/import/xwb_dbe_periph.vhd:54]
+	Parameter g_interface_mode bound to: 1'b0 
+	Parameter g_address_granularity bound to: 1'b1 
+	Parameter g_cntr_period bound to: 100000 - type: integer 
+	Parameter g_num_leds bound to: 8 - type: integer 
+	Parameter g_num_buttons bound to: 8 - type: integer 
+	Parameter g_num_mlvds bound to: 8 - type: integer 
+	Parameter g_interface_mode bound to: 1'b0 
+	Parameter g_address_granularity bound to: 1'b1 
+	Parameter g_cntr_period bound to: 100000 - type: integer 
+	Parameter g_num_leds bound to: 8 - type: integer 
+	Parameter g_num_buttons bound to: 8 - type: integer 
+	Parameter g_num_mlvds bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'wb_dbe_periph' declared at 'D:/Devel/projekty/TMS/lnls_out/import/wb_dbe_periph.vhd:9' bound to instance 'cmp_wb_dbe_periph' of component 'wb_dbe_periph' [D:/Devel/projekty/TMS/lnls_out/import/xwb_dbe_periph.vhd:58]
+INFO: [Synth 8-638] synthesizing module 'wb_dbe_periph__parameterized0' [D:/Devel/projekty/TMS/lnls_out/import/wb_dbe_periph.vhd:64]
+	Parameter g_interface_mode bound to: 1'b0 
+	Parameter g_address_granularity bound to: 1'b1 
+	Parameter g_cntr_period bound to: 100000 - type: integer 
+	Parameter g_num_leds bound to: 8 - type: integer 
+	Parameter g_num_buttons bound to: 8 - type: integer 
+	Parameter g_num_mlvds bound to: 8 - type: integer 
+	Parameter g_num_masters bound to: 1 - type: integer 
+	Parameter g_num_slaves bound to: 5 - type: integer 
+	Parameter g_registered bound to: 1 - type: bool 
+	Parameter g_wraparound bound to: 1 - type: bool 
+	Parameter g_layout bound to: 2560'b0000000000000000000000010000000000000000000000000000000000000111000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000100111111110000000000000000000000000000000000000000000000000000011001010001001101011010101001101011100101010000000000000000000000000000000100100000000100100000001100000101010001110101001101001001010111110100011101010000010010010100111101011111001100110011001000100000001000000010000000100000001000000010000000100000001000000000000100000000000000000000000100000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000001100000000000000000000000000000000000000000000000000000000000000110000111100000000000000000000000000000000000000000000000011001110010000101111110110101111101110011101110100000000000000000000000000000001001000000001001100000010001001010100001101000101010100100100111001011111010101000100100101000011010100110101111101000011010011110101010101001110010101000100010101010010001000000010000000000001000000000000000000000001000000000000000000000000000000000000011100000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001011111111000000000000000000000000000000000000000000000000000001100101000100110101101010100110101110010101000000000000000000000000000000010010000000010010000000110000010101000111010100110100100101011111010001110101000001001001010011110101111100110011001100100010000000100000001000000010000000100000001000000010000000100000000000010000000000000000000000010000000000000000000000000000000000000111000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001111111110000000000000000000000000000000000000000000000000000011001010001001101011010101001101011100101010000000000000000000000000000000100100000000100100000001100000101010001110101001101001001010111110100011101010000010010010100111101011111001100110011001000100000001000000010000000100000001000000010000000100000001000000000000100000000000000000000000100000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111111100000000000000000000000000000000000000000000000011001110010000101000101001010111000110011010111000000000000000000000000000000001001000000001001000010000000100010100001101000101010100100100111001011111010100110100100101001101010100000100110001000101010111110101010101000001010100100101010000100000001000000010000000000001 
+	Parameter g_sdb_addr bound to: 32'b00000000000000000000010100000000 
+INFO: [Synth 8-3491] module 'xwb_sdb_crossbar' declared at 'D:/Devel/projekty/TMS/lnls_out/import/xwb_sdb_crossbar.vhd:6' bound to instance 'cmp_interconnect' of component 'xwb_sdb_crossbar' [D:/Devel/projekty/TMS/lnls_out/import/wb_dbe_periph.vhd:120]
+INFO: [Synth 8-638] synthesizing module 'xwb_sdb_crossbar__parameterized2' [D:/Devel/projekty/TMS/lnls_out/import/xwb_sdb_crossbar.vhd:25]
+	Parameter g_num_masters bound to: 1 - type: integer 
+	Parameter g_num_slaves bound to: 5 - type: integer 
+	Parameter g_registered bound to: 1 - type: bool 
+	Parameter g_wraparound bound to: 1 - type: bool 
+	Parameter g_layout bound to: 2560'b0000000000000000000000010000000000000000000000000000000000000111000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000100111111110000000000000000000000000000000000000000000000000000011001010001001101011010101001101011100101010000000000000000000000000000000100100000000100100000001100000101010001110101001101001001010111110100011101010000010010010100111101011111001100110011001000100000001000000010000000100000001000000010000000100000001000000000000100000000000000000000000100000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000001100000000000000000000000000000000000000000000000000000000000000110000111100000000000000000000000000000000000000000000000011001110010000101111110110101111101110011101110100000000000000000000000000000001001000000001001100000010001001010100001101000101010100100100111001011111010101000100100101000011010100110101111101000011010011110101010101001110010101000100010101010010001000000010000000000001000000000000000000000001000000000000000000000000000000000000011100000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001011111111000000000000000000000000000000000000000000000000000001100101000100110101101010100110101110010101000000000000000000000000000000010010000000010010000000110000010101000111010100110100100101011111010001110101000001001001010011110101111100110011001100100010000000100000001000000010000000100000001000000010000000100000000000010000000000000000000000010000000000000000000000000000000000000111000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001111111110000000000000000000000000000000000000000000000000000011001010001001101011010101001101011100101010000000000000000000000000000000100100000000100100000001100000101010001110101001101001001010111110100011101010000010010010100111101011111001100110011001000100000001000000010000000100000001000000010000000100000001000000000000100000000000000000000000100000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111111100000000000000000000000000000000000000000000000011001110010000101000101001010111000110011010111000000000000000000000000000000001001000000001001000010000000100010100001101000101010100100100111001011111010100110100100101001101010100000100110001000101010111110101010101000001010100100101010000100000001000000010000000000001 
+	Parameter g_sdb_addr bound to: 1280 - type: integer 
+WARNING: [Synth 8-63] RTL assertion: "SDB address is not aligned (0x500). This is not supported by the crossbar." [D:/Devel/projekty/TMS/lnls_out/import/xwb_sdb_crossbar.vhd:53]
+	Parameter g_layout bound to: 2560'b0000000000000000000000010000000000000000000000000000000000000111000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000100111111110000000000000000000000000000000000000000000000000000011001010001001101011010101001101011100101010000000000000000000000000000000100100000000100100000001100000101010001110101001101001001010111110100011101010000010010010100111101011111001100110011001000100000001000000010000000100000001000000010000000100000001000000000000100000000000000000000000100000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000001100000000000000000000000000000000000000000000000000000000000000110000111100000000000000000000000000000000000000000000000011001110010000101111110110101111101110011101110100000000000000000000000000000001001000000001001100000010001001010100001101000101010100100100111001011111010101000100100101000011010100110101111101000011010011110101010101001110010101000100010101010010001000000010000000000001000000000000000000000001000000000000000000000000000000000000011100000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001011111111000000000000000000000000000000000000000000000000000001100101000100110101101010100110101110010101000000000000000000000000000000010010000000010010000000110000010101000111010100110100100101011111010001110101000001001001010011110101111100110011001100100010000000100000001000000010000000100000001000000010000000100000000000010000000000000000000000010000000000000000000000000000000000000111000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001111111110000000000000000000000000000000000000000000000000000011001010001001101011010101001101011100101010000000000000000000000000000000100100000000100100000001100000101010001110101001101001001010111110100011101010000010010010100111101011111001100110011001000100000001000000010000000100000001000000010000000100000001000000000000100000000000000000000000100000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111111100000000000000000000000000000000000000000000000011001110010000101000101001010111000110011010111000000000000000000000000000000001001000000001001000010000000100010100001101000101010100100100111001011111010100110100100101001101010100000100110001000101010111110101010101000001010100100101010000100000001000000010000000000001 
+	Parameter g_bus_end bound to: 64'b0000000000000000000000000000000000000000000000000000011111111111 
+INFO: [Synth 8-3491] module 'sdb_rom' declared at 'D:/Devel/projekty/TMS/lnls_out/import/sdb_rom.vhd:6' bound to instance 'rom' of component 'sdb_rom' [D:/Devel/projekty/TMS/lnls_out/import/xwb_sdb_crossbar.vhd:168]
+INFO: [Synth 8-638] synthesizing module 'sdb_rom__parameterized2' [D:/Devel/projekty/TMS/lnls_out/import/sdb_rom.vhd:16]
+	Parameter g_layout bound to: 2560'b0000000000000000000000010000000000000000000000000000000000000111000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000100111111110000000000000000000000000000000000000000000000000000011001010001001101011010101001101011100101010000000000000000000000000000000100100000000100100000001100000101010001110101001101001001010111110100011101010000010010010100111101011111001100110011001000100000001000000010000000100000001000000010000000100000001000000000000100000000000000000000000100000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000001100000000000000000000000000000000000000000000000000000000000000110000111100000000000000000000000000000000000000000000000011001110010000101111110110101111101110011101110100000000000000000000000000000001001000000001001100000010001001010100001101000101010100100100111001011111010101000100100101000011010100110101111101000011010011110101010101001110010101000100010101010010001000000010000000000001000000000000000000000001000000000000000000000000000000000000011100000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001011111111000000000000000000000000000000000000000000000000000001100101000100110101101010100110101110010101000000000000000000000000000000010010000000010010000000110000010101000111010100110100100101011111010001110101000001001001010011110101111100110011001100100010000000100000001000000010000000100000001000000010000000100000000000010000000000000000000000010000000000000000000000000000000000000111000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001111111110000000000000000000000000000000000000000000000000000011001010001001101011010101001101011100101010000000000000000000000000000000100100000000100100000001100000101010001110101001101001001010111110100011101010000010010010100111101011111001100110011001000100000001000000010000000100000001000000010000000100000001000000000000100000000000000000000000100000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111111100000000000000000000000000000000000000000000000011001110010000101000101001010111000110011010111000000000000000000000000000000001001000000001001000010000000100010100001101000101010100100100111001011111010100110100100101001101010100000100110001000101010111110101010101000001010100100101010000100000001000000010000000000001 
+	Parameter g_bus_end bound to: 64'b0000000000000000000000000000000000000000000000000000011111111111 
+INFO: [Synth 8-256] done synthesizing module 'sdb_rom__parameterized2' (12#1) [D:/Devel/projekty/TMS/lnls_out/import/sdb_rom.vhd:16]
+	Parameter g_num_masters bound to: 1 - type: integer 
+	Parameter g_num_slaves bound to: 6 - type: integer 
+	Parameter g_registered bound to: 1 - type: bool 
+	Parameter g_address bound to: 192'b000000000000000000000101000000000000000000000000000001000000000000000000000000000000001100000000000000000000000000000010000000000000000000000000000000010000000000000000000000000000000000000000 
+	Parameter g_mask bound to: 192'b000000000000000000000110000000000000000000000000000001110000000000000000000000000000011111110000000000000000000000000111000000000000000000000000000001110000000000000000000000000000011100000000 
+INFO: [Synth 8-3491] module 'xwb_crossbar' declared at 'D:/Devel/projekty/TMS/lnls_out/import/xwb_crossbar.vhd:53' bound to instance 'crossbar' of component 'xwb_crossbar' [D:/Devel/projekty/TMS/lnls_out/import/xwb_sdb_crossbar.vhd:177]
+INFO: [Synth 8-638] synthesizing module 'xwb_crossbar__parameterized2' [D:/Devel/projekty/TMS/lnls_out/import/xwb_crossbar.vhd:72]
+	Parameter g_num_masters bound to: 1 - type: integer 
+	Parameter g_num_slaves bound to: 6 - type: integer 
+	Parameter g_registered bound to: 1 - type: bool 
+	Parameter g_address bound to: 192'b000000000000000000000101000000000000000000000000000001000000000000000000000000000000001100000000000000000000000000000010000000000000000000000000000000010000000000000000000000000000000000000000 
+	Parameter g_mask bound to: 192'b000000000000000000000110000000000000000000000000000001110000000000000000000000000000011111110000000000000000000000000111000000000000000000000000000001110000000000000000000000000000011100000000 
+WARNING: [Synth 8-63] RTL assertion: "Address ranges must be distinct (slaves 4[0x400/0x700] & 5[0x500/0x600])" [D:/Devel/projekty/TMS/lnls_out/import/xwb_crossbar.vhd:84]
+INFO: [Synth 8-63] RTL assertion: "Mapping slave #0[0x0/0x700]" [D:/Devel/projekty/TMS/lnls_out/import/xwb_crossbar.vhd:96]
+INFO: [Synth 8-63] RTL assertion: "Mapping slave #1[0x100/0x700]" [D:/Devel/projekty/TMS/lnls_out/import/xwb_crossbar.vhd:96]
+INFO: [Synth 8-63] RTL assertion: "Mapping slave #2[0x200/0x700]" [D:/Devel/projekty/TMS/lnls_out/import/xwb_crossbar.vhd:96]
+INFO: [Synth 8-63] RTL assertion: "Mapping slave #3[0x300/0x7f0]" [D:/Devel/projekty/TMS/lnls_out/import/xwb_crossbar.vhd:96]
+INFO: [Synth 8-63] RTL assertion: "Mapping slave #4[0x400/0x700]" [D:/Devel/projekty/TMS/lnls_out/import/xwb_crossbar.vhd:96]
+INFO: [Synth 8-63] RTL assertion: "Mapping slave #5[0x500/0x600]" [D:/Devel/projekty/TMS/lnls_out/import/xwb_crossbar.vhd:96]
+INFO: [Synth 8-256] done synthesizing module 'xwb_crossbar__parameterized2' (12#1) [D:/Devel/projekty/TMS/lnls_out/import/xwb_crossbar.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'xwb_sdb_crossbar__parameterized2' (12#1) [D:/Devel/projekty/TMS/lnls_out/import/xwb_sdb_crossbar.vhd:25]
+	Parameter g_with_virtual_uart bound to: 0 - type: bool 
+	Parameter g_with_physical_uart bound to: 1 - type: bool 
+	Parameter g_interface_mode bound to: 1'b1 
+	Parameter g_address_granularity bound to: 1'b0 
+	Parameter g_vuart_fifo_size bound to: 1024 - type: integer 
+INFO: [Synth 8-3491] module 'xwb_simple_uart' declared at 'D:/Devel/projekty/TMS/lnls_out/import/xwb_simple_uart.vhd:33' bound to instance 'cmp_uart' of component 'xwb_simple_uart' [D:/Devel/projekty/TMS/lnls_out/import/wb_dbe_periph.vhd:155]
+INFO: [Synth 8-638] synthesizing module 'xwb_simple_uart__parameterized0' [D:/Devel/projekty/TMS/lnls_out/import/xwb_simple_uart.vhd:58]
+	Parameter g_with_virtual_uart bound to: 0 - type: bool 
+	Parameter g_with_physical_uart bound to: 1 - type: bool 
+	Parameter g_interface_mode bound to: 1'b1 
+	Parameter g_address_granularity bound to: 1'b0 
+	Parameter g_vuart_fifo_size bound to: 1024 - type: integer 
+	Parameter g_with_virtual_uart bound to: 0 - type: bool 
+	Parameter g_with_physical_uart bound to: 1 - type: bool 
+	Parameter g_interface_mode bound to: 1'b1 
+	Parameter g_address_granularity bound to: 1'b0 
+	Parameter g_vuart_fifo_size bound to: 1024 - type: integer 
+INFO: [Synth 8-3491] module 'wb_simple_uart' declared at 'D:/Devel/projekty/TMS/lnls_out/import/wb_simple_uart.vhd:34' bound to instance 'U_Wrapped_UART' of component 'wb_simple_uart' [D:/Devel/projekty/TMS/lnls_out/import/xwb_simple_uart.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'wb_simple_uart__parameterized0' [D:/Devel/projekty/TMS/lnls_out/import/wb_simple_uart.vhd:62]
+	Parameter g_with_virtual_uart bound to: 0 - type: bool 
+	Parameter g_with_physical_uart bound to: 1 - type: bool 
+	Parameter g_interface_mode bound to: 1'b1 
+	Parameter g_address_granularity bound to: 1'b0 
+	Parameter g_vuart_fifo_size bound to: 1024 - type: integer 
+	Parameter g_master_use_struct bound to: 1 - type: bool 
+	Parameter g_master_mode bound to: 1'b0 
+	Parameter g_master_granularity bound to: 1'b1 
+	Parameter g_slave_use_struct bound to: 0 - type: bool 
+	Parameter g_slave_mode bound to: 1'b1 
+	Parameter g_slave_granularity bound to: 1'b0 
+INFO: [Synth 8-3491] module 'wb_slave_adapter' declared at 'D:/Devel/projekty/TMS/lnls_out/import/wb_slave_adapter.vhd:11' bound to instance 'U_Adapter' of component 'wb_slave_adapter' [D:/Devel/projekty/TMS/lnls_out/import/wb_simple_uart.vhd:154]
+INFO: [Synth 8-638] synthesizing module 'wb_slave_adapter__parameterized4' [D:/Devel/projekty/TMS/lnls_out/import/wb_slave_adapter.vhd:65]
+	Parameter g_master_use_struct bound to: 1 - type: bool 
+	Parameter g_master_mode bound to: 1'b0 
+	Parameter g_master_granularity bound to: 1'b1 
+	Parameter g_slave_use_struct bound to: 0 - type: bool 
+	Parameter g_slave_mode bound to: 1'b1 
+	Parameter g_slave_granularity bound to: 1'b0 
+INFO: [Synth 8-256] done synthesizing module 'wb_slave_adapter__parameterized4' (12#1) [D:/Devel/projekty/TMS/lnls_out/import/wb_slave_adapter.vhd:65]
+INFO: [Synth 8-3491] module 'simple_uart_wb' declared at 'D:/Devel/projekty/TMS/lnls_out/import/simple_uart_wb.vhd:20' bound to instance 'U_WB_SLAVE' of component 'simple_uart_wb' [D:/Devel/projekty/TMS/lnls_out/import/wb_simple_uart.vhd:177]
+INFO: [Synth 8-638] synthesizing module 'simple_uart_wb' [D:/Devel/projekty/TMS/lnls_out/import/simple_uart_wb.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'simple_uart_wb' (13#1) [D:/Devel/projekty/TMS/lnls_out/import/simple_uart_wb.vhd:40]
+	Parameter g_baud_acc_width bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'uart_baud_gen' declared at 'D:/Devel/projekty/TMS/lnls_out/import/uart_baud_gen.vhd:5' bound to instance 'U_BAUD_GEN' of component 'uart_baud_gen' [D:/Devel/projekty/TMS/lnls_out/import/wb_simple_uart.vhd:209]
+INFO: [Synth 8-638] synthesizing module 'uart_baud_gen__parameterized0' [D:/Devel/projekty/TMS/lnls_out/import/uart_baud_gen.vhd:21]
+	Parameter g_baud_acc_width bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'uart_baud_gen__parameterized0' (14#1) [D:/Devel/projekty/TMS/lnls_out/import/uart_baud_gen.vhd:21]
+INFO: [Synth 8-3491] module 'uart_async_tx' declared at 'D:/Devel/projekty/TMS/lnls_out/import/uart_async_tx.vhd:5' bound to instance 'U_TX' of component 'uart_async_tx' [D:/Devel/projekty/TMS/lnls_out/import/wb_simple_uart.vhd:219]
+INFO: [Synth 8-638] synthesizing module 'uart_async_tx' [D:/Devel/projekty/TMS/lnls_out/import/uart_async_tx.vhd:22]
+INFO: [Synth 8-226] default block is never used [D:/Devel/projekty/TMS/lnls_out/import/uart_async_tx.vhd:130]
+INFO: [Synth 8-256] done synthesizing module 'uart_async_tx' (15#1) [D:/Devel/projekty/TMS/lnls_out/import/uart_async_tx.vhd:22]
+INFO: [Synth 8-3491] module 'uart_async_rx' declared at 'D:/Devel/projekty/TMS/lnls_out/import/uart_async_rx.vhd:5' bound to instance 'U_RX' of component 'uart_async_rx' [D:/Devel/projekty/TMS/lnls_out/import/wb_simple_uart.vhd:229]
+INFO: [Synth 8-638] synthesizing module 'uart_async_rx' [D:/Devel/projekty/TMS/lnls_out/import/uart_async_rx.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'uart_async_rx' (16#1) [D:/Devel/projekty/TMS/lnls_out/import/uart_async_rx.vhd:24]
+WARNING: [Synth 8-3848] Net wb_out[err] in module/entity wb_simple_uart__parameterized0 does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/wb_simple_uart.vhd:132]
+WARNING: [Synth 8-3848] Net wb_out[rty] in module/entity wb_simple_uart__parameterized0 does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/wb_simple_uart.vhd:132]
+WARNING: [Synth 8-3848] Net wb_out[int] in module/entity wb_simple_uart__parameterized0 does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/wb_simple_uart.vhd:132]
+WARNING: [Synth 8-3848] Net regs_in[host_rdr_data_i] in module/entity wb_simple_uart__parameterized0 does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/wb_simple_uart.vhd:134]
+WARNING: [Synth 8-3848] Net regs_in[host_rdr_rdy_i] in module/entity wb_simple_uart__parameterized0 does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/wb_simple_uart.vhd:134]
+WARNING: [Synth 8-3848] Net regs_in[host_rdr_count_i] in module/entity wb_simple_uart__parameterized0 does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/wb_simple_uart.vhd:134]
+INFO: [Synth 8-256] done synthesizing module 'wb_simple_uart__parameterized0' (17#1) [D:/Devel/projekty/TMS/lnls_out/import/wb_simple_uart.vhd:62]
+WARNING: [Synth 8-3848] Net desc_o in module/entity xwb_simple_uart__parameterized0 does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/xwb_simple_uart.vhd:49]
+INFO: [Synth 8-256] done synthesizing module 'xwb_simple_uart__parameterized0' (18#1) [D:/Devel/projekty/TMS/lnls_out/import/xwb_simple_uart.vhd:58]
+	Parameter g_interface_mode bound to: 1'b1 
+	Parameter g_address_granularity bound to: 1'b0 
+	Parameter g_num_pins bound to: 8 - type: integer 
+	Parameter g_with_builtin_tristates bound to: 0 - type: bool 
+	Parameter g_debug bound to: 0 - type: bool 
+INFO: [Synth 8-3491] module 'xwb_gpio_port' declared at 'D:/Devel/projekty/TMS/lnls_out/import/xwb_gpio_port.vhd:6' bound to instance 'cmp_leds' of component 'xwb_gpio_port' [D:/Devel/projekty/TMS/lnls_out/import/wb_dbe_periph.vhd:170]
+INFO: [Synth 8-638] synthesizing module 'xwb_gpio_port__parameterized0' [D:/Devel/projekty/TMS/lnls_out/import/xwb_gpio_port.vhd:38]
+	Parameter g_interface_mode bound to: 1'b1 
+	Parameter g_address_granularity bound to: 1'b0 
+	Parameter g_num_pins bound to: 8 - type: integer 
+	Parameter g_with_builtin_tristates bound to: 0 - type: bool 
+	Parameter g_debug bound to: 0 - type: bool 
+	Parameter g_interface_mode bound to: 1'b1 
+	Parameter g_address_granularity bound to: 1'b0 
+	Parameter g_num_pins bound to: 8 - type: integer 
+	Parameter g_with_builtin_tristates bound to: 0 - type: bool 
+	Parameter g_debug bound to: 0 - type: bool 
+INFO: [Synth 8-3491] module 'wb_gpio_port' declared at 'D:/Devel/projekty/TMS/lnls_out/import/wb_gpio_port.vhd:34' bound to instance 'Wrapped_GPIO' of component 'wb_gpio_port' [D:/Devel/projekty/TMS/lnls_out/import/xwb_gpio_port.vhd:72]
+INFO: [Synth 8-638] synthesizing module 'wb_gpio_port__parameterized0' [D:/Devel/projekty/TMS/lnls_out/import/wb_gpio_port.vhd:73]
+	Parameter g_interface_mode bound to: 1'b1 
+	Parameter g_address_granularity bound to: 1'b0 
+	Parameter g_num_pins bound to: 8 - type: integer 
+	Parameter g_with_builtin_tristates bound to: 0 - type: bool 
+	Parameter g_debug bound to: 0 - type: bool 
+	Parameter g_master_use_struct bound to: 1 - type: bool 
+	Parameter g_master_mode bound to: 1'b0 
+	Parameter g_master_granularity bound to: 1'b1 
+	Parameter g_slave_use_struct bound to: 0 - type: bool 
+	Parameter g_slave_mode bound to: 1'b1 
+	Parameter g_slave_granularity bound to: 1'b0 
+INFO: [Synth 8-3491] module 'wb_slave_adapter' declared at 'D:/Devel/projekty/TMS/lnls_out/import/wb_slave_adapter.vhd:11' bound to instance 'U_Adapter' of component 'wb_slave_adapter' [D:/Devel/projekty/TMS/lnls_out/import/wb_gpio_port.vhd:127]
+	Parameter g_sync_edge bound to: positive - type: string 
+INFO: [Synth 8-3491] module 'gc_sync_ffs' declared at 'D:/Devel/projekty/TMS/lnls_out/import/gc_sync_ffs.vhd:43' bound to instance 'INPUT_SYNC' of component 'gc_sync_ffs' [D:/Devel/projekty/TMS/lnls_out/import/wb_gpio_port.vhd:153]
+INFO: [Synth 8-638] synthesizing module 'gc_sync_ffs__parameterized0' [D:/Devel/projekty/TMS/lnls_out/import/gc_sync_ffs.vhd:59]
+	Parameter g_sync_edge bound to: positive - type: string 
+INFO: [Synth 8-4472] Detected and applied attribute shreg_extract = no [D:/Devel/projekty/TMS/lnls_out/import/gc_sync_ffs.vhd:60]
+INFO: [Synth 8-4472] Detected and applied attribute shreg_extract = no [D:/Devel/projekty/TMS/lnls_out/import/gc_sync_ffs.vhd:60]
+INFO: [Synth 8-4472] Detected and applied attribute shreg_extract = no [D:/Devel/projekty/TMS/lnls_out/import/gc_sync_ffs.vhd:60]
+INFO: [Synth 8-256] done synthesizing module 'gc_sync_ffs__parameterized0' (19#1) [D:/Devel/projekty/TMS/lnls_out/import/gc_sync_ffs.vhd:59]
+	Parameter g_sync_edge bound to: positive - type: string 
+INFO: [Synth 8-3491] module 'gc_sync_ffs' declared at 'D:/Devel/projekty/TMS/lnls_out/import/gc_sync_ffs.vhd:43' bound to instance 'INPUT_SYNC' of component 'gc_sync_ffs' [D:/Devel/projekty/TMS/lnls_out/import/wb_gpio_port.vhd:153]
+	Parameter g_sync_edge bound to: positive - type: string 
+INFO: [Synth 8-3491] module 'gc_sync_ffs' declared at 'D:/Devel/projekty/TMS/lnls_out/import/gc_sync_ffs.vhd:43' bound to instance 'INPUT_SYNC' of component 'gc_sync_ffs' [D:/Devel/projekty/TMS/lnls_out/import/wb_gpio_port.vhd:153]
+	Parameter g_sync_edge bound to: positive - type: string 
+INFO: [Synth 8-3491] module 'gc_sync_ffs' declared at 'D:/Devel/projekty/TMS/lnls_out/import/gc_sync_ffs.vhd:43' bound to instance 'INPUT_SYNC' of component 'gc_sync_ffs' [D:/Devel/projekty/TMS/lnls_out/import/wb_gpio_port.vhd:153]
+	Parameter g_sync_edge bound to: positive - type: string 
+INFO: [Synth 8-3491] module 'gc_sync_ffs' declared at 'D:/Devel/projekty/TMS/lnls_out/import/gc_sync_ffs.vhd:43' bound to instance 'INPUT_SYNC' of component 'gc_sync_ffs' [D:/Devel/projekty/TMS/lnls_out/import/wb_gpio_port.vhd:153]
+	Parameter g_sync_edge bound to: positive - type: string 
+INFO: [Synth 8-3491] module 'gc_sync_ffs' declared at 'D:/Devel/projekty/TMS/lnls_out/import/gc_sync_ffs.vhd:43' bound to instance 'INPUT_SYNC' of component 'gc_sync_ffs' [D:/Devel/projekty/TMS/lnls_out/import/wb_gpio_port.vhd:153]
+	Parameter g_sync_edge bound to: positive - type: string 
+INFO: [Synth 8-3491] module 'gc_sync_ffs' declared at 'D:/Devel/projekty/TMS/lnls_out/import/gc_sync_ffs.vhd:43' bound to instance 'INPUT_SYNC' of component 'gc_sync_ffs' [D:/Devel/projekty/TMS/lnls_out/import/wb_gpio_port.vhd:153]
+	Parameter g_sync_edge bound to: positive - type: string 
+INFO: [Synth 8-3491] module 'gc_sync_ffs' declared at 'D:/Devel/projekty/TMS/lnls_out/import/gc_sync_ffs.vhd:43' bound to instance 'INPUT_SYNC' of component 'gc_sync_ffs' [D:/Devel/projekty/TMS/lnls_out/import/wb_gpio_port.vhd:153]
+INFO: [Synth 8-226] default block is never used [D:/Devel/projekty/TMS/lnls_out/import/wb_gpio_port.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'wb_gpio_port__parameterized0' (20#1) [D:/Devel/projekty/TMS/lnls_out/import/wb_gpio_port.vhd:73]
+WARNING: [Synth 8-3848] Net desc_o in module/entity xwb_gpio_port__parameterized0 does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/xwb_gpio_port.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'xwb_gpio_port__parameterized0' (21#1) [D:/Devel/projekty/TMS/lnls_out/import/xwb_gpio_port.vhd:38]
+	Parameter g_interface_mode bound to: 1'b1 
+	Parameter g_address_granularity bound to: 1'b0 
+	Parameter g_num_pins bound to: 8 - type: integer 
+	Parameter g_with_builtin_tristates bound to: 0 - type: bool 
+	Parameter g_debug bound to: 0 - type: bool 
+INFO: [Synth 8-3491] module 'xwb_gpio_port' declared at 'D:/Devel/projekty/TMS/lnls_out/import/xwb_gpio_port.vhd:6' bound to instance 'cmp_buttons' of component 'xwb_gpio_port' [D:/Devel/projekty/TMS/lnls_out/import/wb_dbe_periph.vhd:197]
+	Parameter g_interface_mode bound to: 1'b1 
+	Parameter g_address_granularity bound to: 1'b1 
+	Parameter g_period bound to: 100000 - type: integer 
+INFO: [Synth 8-3491] module 'xwb_tics' declared at 'D:/Devel/projekty/TMS/lnls_out/import/xwb_tics.vhd:8' bound to instance 'cmp_xwb_tics' of component 'xwb_tics' [D:/Devel/projekty/TMS/lnls_out/import/wb_dbe_periph.vhd:224]
+INFO: [Synth 8-638] synthesizing module 'xwb_tics__parameterized0' [D:/Devel/projekty/TMS/lnls_out/import/xwb_tics.vhd:34]
+	Parameter g_interface_mode bound to: 1'b1 
+	Parameter g_address_granularity bound to: 1'b1 
+	Parameter g_period bound to: 100000 - type: integer 
+	Parameter g_interface_mode bound to: 1'b1 
+	Parameter g_address_granularity bound to: 1'b1 
+	Parameter g_period bound to: 100000 - type: integer 
+INFO: [Synth 8-3491] module 'wb_tics' declared at 'D:/Devel/projekty/TMS/lnls_out/import/wb_tics.vhd:34' bound to instance 'U_Tics' of component 'wb_tics' [D:/Devel/projekty/TMS/lnls_out/import/xwb_tics.vhd:63]
+INFO: [Synth 8-638] synthesizing module 'wb_tics__parameterized0' [D:/Devel/projekty/TMS/lnls_out/import/wb_tics.vhd:59]
+	Parameter g_interface_mode bound to: 1'b1 
+	Parameter g_address_granularity bound to: 1'b1 
+	Parameter g_period bound to: 100000 - type: integer 
+	Parameter g_master_use_struct bound to: 1 - type: bool 
+	Parameter g_master_mode bound to: 1'b0 
+	Parameter g_master_granularity bound to: 1'b1 
+	Parameter g_slave_use_struct bound to: 0 - type: bool 
+	Parameter g_slave_mode bound to: 1'b1 
+	Parameter g_slave_granularity bound to: 1'b1 
+INFO: [Synth 8-3491] module 'wb_slave_adapter' declared at 'D:/Devel/projekty/TMS/lnls_out/import/wb_slave_adapter.vhd:11' bound to instance 'U_Adapter' of component 'wb_slave_adapter' [D:/Devel/projekty/TMS/lnls_out/import/wb_tics.vhd:93]
+INFO: [Synth 8-638] synthesizing module 'wb_slave_adapter__parameterized6' [D:/Devel/projekty/TMS/lnls_out/import/wb_slave_adapter.vhd:65]
+	Parameter g_master_use_struct bound to: 1 - type: bool 
+	Parameter g_master_mode bound to: 1'b0 
+	Parameter g_master_granularity bound to: 1'b1 
+	Parameter g_slave_use_struct bound to: 0 - type: bool 
+	Parameter g_slave_mode bound to: 1'b1 
+	Parameter g_slave_granularity bound to: 1'b1 
+INFO: [Synth 8-256] done synthesizing module 'wb_slave_adapter__parameterized6' (21#1) [D:/Devel/projekty/TMS/lnls_out/import/wb_slave_adapter.vhd:65]
+WARNING: [Synth 8-3848] Net wb_out[err] in module/entity wb_tics__parameterized0 does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/wb_tics.vhd:85]
+WARNING: [Synth 8-3848] Net wb_out[rty] in module/entity wb_tics__parameterized0 does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/wb_tics.vhd:85]
+WARNING: [Synth 8-3848] Net wb_out[stall] in module/entity wb_tics__parameterized0 does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/wb_tics.vhd:85]
+WARNING: [Synth 8-3848] Net wb_out[int] in module/entity wb_tics__parameterized0 does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/wb_tics.vhd:85]
+INFO: [Synth 8-256] done synthesizing module 'wb_tics__parameterized0' (22#1) [D:/Devel/projekty/TMS/lnls_out/import/wb_tics.vhd:59]
+WARNING: [Synth 8-3848] Net desc_o in module/entity xwb_tics__parameterized0 does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/xwb_tics.vhd:28]
+INFO: [Synth 8-256] done synthesizing module 'xwb_tics__parameterized0' (23#1) [D:/Devel/projekty/TMS/lnls_out/import/xwb_tics.vhd:34]
+	Parameter g_interface_mode bound to: 1'b1 
+	Parameter g_address_granularity bound to: 1'b0 
+	Parameter g_num_pins bound to: 8 - type: integer 
+	Parameter g_with_builtin_tristates bound to: 1 - type: bool 
+	Parameter g_debug bound to: 0 - type: bool 
+INFO: [Synth 8-3491] module 'xwb_gpio_port' declared at 'D:/Devel/projekty/TMS/lnls_out/import/xwb_gpio_port.vhd:6' bound to instance 'cmp_mlvds' of component 'xwb_gpio_port' [D:/Devel/projekty/TMS/lnls_out/import/wb_dbe_periph.vhd:247]
+INFO: [Synth 8-638] synthesizing module 'xwb_gpio_port__parameterized2' [D:/Devel/projekty/TMS/lnls_out/import/xwb_gpio_port.vhd:38]
+	Parameter g_interface_mode bound to: 1'b1 
+	Parameter g_address_granularity bound to: 1'b0 
+	Parameter g_num_pins bound to: 8 - type: integer 
+	Parameter g_with_builtin_tristates bound to: 1 - type: bool 
+	Parameter g_debug bound to: 0 - type: bool 
+	Parameter g_interface_mode bound to: 1'b1 
+	Parameter g_address_granularity bound to: 1'b0 
+	Parameter g_num_pins bound to: 8 - type: integer 
+	Parameter g_with_builtin_tristates bound to: 1 - type: bool 
+	Parameter g_debug bound to: 0 - type: bool 
+INFO: [Synth 8-3491] module 'wb_gpio_port' declared at 'D:/Devel/projekty/TMS/lnls_out/import/wb_gpio_port.vhd:34' bound to instance 'Wrapped_GPIO' of component 'wb_gpio_port' [D:/Devel/projekty/TMS/lnls_out/import/xwb_gpio_port.vhd:72]
+INFO: [Synth 8-638] synthesizing module 'wb_gpio_port__parameterized2' [D:/Devel/projekty/TMS/lnls_out/import/wb_gpio_port.vhd:73]
+	Parameter g_interface_mode bound to: 1'b1 
+	Parameter g_address_granularity bound to: 1'b0 
+	Parameter g_num_pins bound to: 8 - type: integer 
+	Parameter g_with_builtin_tristates bound to: 1 - type: bool 
+	Parameter g_debug bound to: 0 - type: bool 
+	Parameter g_master_use_struct bound to: 1 - type: bool 
+	Parameter g_master_mode bound to: 1'b0 
+	Parameter g_master_granularity bound to: 1'b1 
+	Parameter g_slave_use_struct bound to: 0 - type: bool 
+	Parameter g_slave_mode bound to: 1'b1 
+	Parameter g_slave_granularity bound to: 1'b0 
+INFO: [Synth 8-3491] module 'wb_slave_adapter' declared at 'D:/Devel/projekty/TMS/lnls_out/import/wb_slave_adapter.vhd:11' bound to instance 'U_Adapter' of component 'wb_slave_adapter' [D:/Devel/projekty/TMS/lnls_out/import/wb_gpio_port.vhd:127]
+	Parameter g_sync_edge bound to: positive - type: string 
+INFO: [Synth 8-3491] module 'gc_sync_ffs' declared at 'D:/Devel/projekty/TMS/lnls_out/import/gc_sync_ffs.vhd:43' bound to instance 'INPUT_SYNC' of component 'gc_sync_ffs' [D:/Devel/projekty/TMS/lnls_out/import/wb_gpio_port.vhd:153]
+	Parameter g_sync_edge bound to: positive - type: string 
+INFO: [Synth 8-3491] module 'gc_sync_ffs' declared at 'D:/Devel/projekty/TMS/lnls_out/import/gc_sync_ffs.vhd:43' bound to instance 'INPUT_SYNC' of component 'gc_sync_ffs' [D:/Devel/projekty/TMS/lnls_out/import/wb_gpio_port.vhd:153]
+	Parameter g_sync_edge bound to: positive - type: string 
+INFO: [Synth 8-3491] module 'gc_sync_ffs' declared at 'D:/Devel/projekty/TMS/lnls_out/import/gc_sync_ffs.vhd:43' bound to instance 'INPUT_SYNC' of component 'gc_sync_ffs' [D:/Devel/projekty/TMS/lnls_out/import/wb_gpio_port.vhd:153]
+	Parameter g_sync_edge bound to: positive - type: string 
+INFO: [Synth 8-3491] module 'gc_sync_ffs' declared at 'D:/Devel/projekty/TMS/lnls_out/import/gc_sync_ffs.vhd:43' bound to instance 'INPUT_SYNC' of component 'gc_sync_ffs' [D:/Devel/projekty/TMS/lnls_out/import/wb_gpio_port.vhd:153]
+	Parameter g_sync_edge bound to: positive - type: string 
+INFO: [Synth 8-3491] module 'gc_sync_ffs' declared at 'D:/Devel/projekty/TMS/lnls_out/import/gc_sync_ffs.vhd:43' bound to instance 'INPUT_SYNC' of component 'gc_sync_ffs' [D:/Devel/projekty/TMS/lnls_out/import/wb_gpio_port.vhd:153]
+	Parameter g_sync_edge bound to: positive - type: string 
+INFO: [Synth 8-3491] module 'gc_sync_ffs' declared at 'D:/Devel/projekty/TMS/lnls_out/import/gc_sync_ffs.vhd:43' bound to instance 'INPUT_SYNC' of component 'gc_sync_ffs' [D:/Devel/projekty/TMS/lnls_out/import/wb_gpio_port.vhd:153]
+	Parameter g_sync_edge bound to: positive - type: string 
+INFO: [Synth 8-3491] module 'gc_sync_ffs' declared at 'D:/Devel/projekty/TMS/lnls_out/import/gc_sync_ffs.vhd:43' bound to instance 'INPUT_SYNC' of component 'gc_sync_ffs' [D:/Devel/projekty/TMS/lnls_out/import/wb_gpio_port.vhd:153]
+	Parameter g_sync_edge bound to: positive - type: string 
+INFO: [Synth 8-3491] module 'gc_sync_ffs' declared at 'D:/Devel/projekty/TMS/lnls_out/import/gc_sync_ffs.vhd:43' bound to instance 'INPUT_SYNC' of component 'gc_sync_ffs' [D:/Devel/projekty/TMS/lnls_out/import/wb_gpio_port.vhd:153]
+INFO: [Synth 8-226] default block is never used [D:/Devel/projekty/TMS/lnls_out/import/wb_gpio_port.vhd:167]
+WARNING: [Synth 8-3848] Net gpio_out_o in module/entity wb_gpio_port__parameterized2 does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/wb_gpio_port.vhd:59]
+INFO: [Synth 8-256] done synthesizing module 'wb_gpio_port__parameterized2' (23#1) [D:/Devel/projekty/TMS/lnls_out/import/wb_gpio_port.vhd:73]
+WARNING: [Synth 8-3848] Net desc_o in module/entity xwb_gpio_port__parameterized2 does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/xwb_gpio_port.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'xwb_gpio_port__parameterized2' (23#1) [D:/Devel/projekty/TMS/lnls_out/import/xwb_gpio_port.vhd:38]
+INFO: [Synth 8-256] done synthesizing module 'wb_dbe_periph__parameterized0' (24#1) [D:/Devel/projekty/TMS/lnls_out/import/wb_dbe_periph.vhd:64]
+WARNING: [Synth 8-3848] Net slave_o[int] in module/entity xwb_dbe_periph__parameterized0 does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/xwb_dbe_periph.vhd:50]
+INFO: [Synth 8-256] done synthesizing module 'xwb_dbe_periph__parameterized0' (25#1) [D:/Devel/projekty/TMS/lnls_out/import/xwb_dbe_periph.vhd:54]
+	Parameter g_num_io bound to: 5 - type: integer 
+	Parameter g_negate_in bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001011 
+	Parameter g_negate_out bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010 
+INFO: [Synth 8-3491] module 'fmc_dio5chttl' declared at 'D:/Devel/projekty/TMS/lnls_out/import/fmc_dio5chttl.vhd:38' bound to instance 'cmp_fmc_5chttl_1_periph' of component 'fmc_dio5chttl' [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:2338]
+INFO: [Synth 8-638] synthesizing module 'fmc_dio5chttl__parameterized0' [D:/Devel/projekty/TMS/lnls_out/import/fmc_dio5chttl.vhd:58]
+	Parameter g_num_io bound to: 5 - type: integer 
+	Parameter g_negate_in bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001011 
+	Parameter g_negate_out bound to: 256'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010 
+	Parameter g_interface_mode bound to: 1'b1 
+	Parameter g_address_granularity bound to: 1'b0 
+	Parameter g_num_pins bound to: 5 - type: integer 
+	Parameter g_with_builtin_tristates bound to: 0 - type: bool 
+	Parameter g_debug bound to: 0 - type: bool 
+INFO: [Synth 8-3491] module 'xwb_gpio_port' declared at 'D:/Devel/projekty/TMS/lnls_out/import/xwb_gpio_port.vhd:6' bound to instance 'cmp_IO' of component 'xwb_gpio_port' [D:/Devel/projekty/TMS/lnls_out/import/fmc_dio5chttl.vhd:122]
+INFO: [Synth 8-638] synthesizing module 'xwb_gpio_port__parameterized4' [D:/Devel/projekty/TMS/lnls_out/import/xwb_gpio_port.vhd:38]
+	Parameter g_interface_mode bound to: 1'b1 
+	Parameter g_address_granularity bound to: 1'b0 
+	Parameter g_num_pins bound to: 5 - type: integer 
+	Parameter g_with_builtin_tristates bound to: 0 - type: bool 
+	Parameter g_debug bound to: 0 - type: bool 
+	Parameter g_interface_mode bound to: 1'b1 
+	Parameter g_address_granularity bound to: 1'b0 
+	Parameter g_num_pins bound to: 5 - type: integer 
+	Parameter g_with_builtin_tristates bound to: 0 - type: bool 
+	Parameter g_debug bound to: 0 - type: bool 
+INFO: [Synth 8-3491] module 'wb_gpio_port' declared at 'D:/Devel/projekty/TMS/lnls_out/import/wb_gpio_port.vhd:34' bound to instance 'Wrapped_GPIO' of component 'wb_gpio_port' [D:/Devel/projekty/TMS/lnls_out/import/xwb_gpio_port.vhd:72]
+INFO: [Synth 8-638] synthesizing module 'wb_gpio_port__parameterized4' [D:/Devel/projekty/TMS/lnls_out/import/wb_gpio_port.vhd:73]
+	Parameter g_interface_mode bound to: 1'b1 
+	Parameter g_address_granularity bound to: 1'b0 
+	Parameter g_num_pins bound to: 5 - type: integer 
+	Parameter g_with_builtin_tristates bound to: 0 - type: bool 
+	Parameter g_debug bound to: 0 - type: bool 
+	Parameter g_master_use_struct bound to: 1 - type: bool 
+	Parameter g_master_mode bound to: 1'b0 
+	Parameter g_master_granularity bound to: 1'b1 
+	Parameter g_slave_use_struct bound to: 0 - type: bool 
+	Parameter g_slave_mode bound to: 1'b1 
+	Parameter g_slave_granularity bound to: 1'b0 
+INFO: [Synth 8-3491] module 'wb_slave_adapter' declared at 'D:/Devel/projekty/TMS/lnls_out/import/wb_slave_adapter.vhd:11' bound to instance 'U_Adapter' of component 'wb_slave_adapter' [D:/Devel/projekty/TMS/lnls_out/import/wb_gpio_port.vhd:127]
+	Parameter g_sync_edge bound to: positive - type: string 
+INFO: [Synth 8-3491] module 'gc_sync_ffs' declared at 'D:/Devel/projekty/TMS/lnls_out/import/gc_sync_ffs.vhd:43' bound to instance 'INPUT_SYNC' of component 'gc_sync_ffs' [D:/Devel/projekty/TMS/lnls_out/import/wb_gpio_port.vhd:153]
+	Parameter g_sync_edge bound to: positive - type: string 
+INFO: [Synth 8-3491] module 'gc_sync_ffs' declared at 'D:/Devel/projekty/TMS/lnls_out/import/gc_sync_ffs.vhd:43' bound to instance 'INPUT_SYNC' of component 'gc_sync_ffs' [D:/Devel/projekty/TMS/lnls_out/import/wb_gpio_port.vhd:153]
+	Parameter g_sync_edge bound to: positive - type: string 
+INFO: [Synth 8-3491] module 'gc_sync_ffs' declared at 'D:/Devel/projekty/TMS/lnls_out/import/gc_sync_ffs.vhd:43' bound to instance 'INPUT_SYNC' of component 'gc_sync_ffs' [D:/Devel/projekty/TMS/lnls_out/import/wb_gpio_port.vhd:153]
+	Parameter g_sync_edge bound to: positive - type: string 
+INFO: [Synth 8-3491] module 'gc_sync_ffs' declared at 'D:/Devel/projekty/TMS/lnls_out/import/gc_sync_ffs.vhd:43' bound to instance 'INPUT_SYNC' of component 'gc_sync_ffs' [D:/Devel/projekty/TMS/lnls_out/import/wb_gpio_port.vhd:153]
+	Parameter g_sync_edge bound to: positive - type: string 
+INFO: [Synth 8-3491] module 'gc_sync_ffs' declared at 'D:/Devel/projekty/TMS/lnls_out/import/gc_sync_ffs.vhd:43' bound to instance 'INPUT_SYNC' of component 'gc_sync_ffs' [D:/Devel/projekty/TMS/lnls_out/import/wb_gpio_port.vhd:153]
+INFO: [Synth 8-226] default block is never used [D:/Devel/projekty/TMS/lnls_out/import/wb_gpio_port.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'wb_gpio_port__parameterized4' (25#1) [D:/Devel/projekty/TMS/lnls_out/import/wb_gpio_port.vhd:73]
+WARNING: [Synth 8-3848] Net desc_o in module/entity xwb_gpio_port__parameterized4 does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/xwb_gpio_port.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'xwb_gpio_port__parameterized4' (25#1) [D:/Devel/projekty/TMS/lnls_out/import/xwb_gpio_port.vhd:38]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter DRIVE bound to: 12 - type: integer 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-113] binding component instance 'cmp_obuf_dir' to cell 'OBUF' [D:/Devel/projekty/TMS/lnls_out/import/fmc_dio5chttl.vhd:155]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter DIFF_TERM bound to: 0 - type: bool 
+	Parameter DQS_BIAS bound to: FALSE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
+	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-113] binding component instance 'cmp_ibuf' to cell 'IBUFDS' [D:/Devel/projekty/TMS/lnls_out/import/fmc_dio5chttl.vhd:165]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-113] binding component instance 'cmp_obuf' to cell 'OBUFDS' [D:/Devel/projekty/TMS/lnls_out/import/fmc_dio5chttl.vhd:185]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter DRIVE bound to: 12 - type: integer 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-113] binding component instance 'cmp_obuf_dir' to cell 'OBUF' [D:/Devel/projekty/TMS/lnls_out/import/fmc_dio5chttl.vhd:155]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter DIFF_TERM bound to: 0 - type: bool 
+	Parameter DQS_BIAS bound to: FALSE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
+	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-113] binding component instance 'cmp_ibuf' to cell 'IBUFDS' [D:/Devel/projekty/TMS/lnls_out/import/fmc_dio5chttl.vhd:165]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-113] binding component instance 'cmp_obuf' to cell 'OBUFDS' [D:/Devel/projekty/TMS/lnls_out/import/fmc_dio5chttl.vhd:185]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter DRIVE bound to: 12 - type: integer 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-113] binding component instance 'cmp_obuf_dir' to cell 'OBUF' [D:/Devel/projekty/TMS/lnls_out/import/fmc_dio5chttl.vhd:155]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter DIFF_TERM bound to: 0 - type: bool 
+	Parameter DQS_BIAS bound to: FALSE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
+	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-113] binding component instance 'cmp_ibuf' to cell 'IBUFDS' [D:/Devel/projekty/TMS/lnls_out/import/fmc_dio5chttl.vhd:165]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-113] binding component instance 'cmp_obuf' to cell 'OBUFDS' [D:/Devel/projekty/TMS/lnls_out/import/fmc_dio5chttl.vhd:185]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter DRIVE bound to: 12 - type: integer 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-113] binding component instance 'cmp_obuf_dir' to cell 'OBUF' [D:/Devel/projekty/TMS/lnls_out/import/fmc_dio5chttl.vhd:155]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter DIFF_TERM bound to: 0 - type: bool 
+	Parameter DQS_BIAS bound to: FALSE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
+	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-113] binding component instance 'cmp_ibuf' to cell 'IBUFDS' [D:/Devel/projekty/TMS/lnls_out/import/fmc_dio5chttl.vhd:165]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-113] binding component instance 'cmp_obuf' to cell 'OBUFDS' [D:/Devel/projekty/TMS/lnls_out/import/fmc_dio5chttl.vhd:185]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter DRIVE bound to: 12 - type: integer 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-113] binding component instance 'cmp_obuf_dir' to cell 'OBUF' [D:/Devel/projekty/TMS/lnls_out/import/fmc_dio5chttl.vhd:155]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter DIFF_TERM bound to: 0 - type: bool 
+	Parameter DQS_BIAS bound to: FALSE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
+	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-113] binding component instance 'cmp_ibuf' to cell 'IBUFDS' [D:/Devel/projekty/TMS/lnls_out/import/fmc_dio5chttl.vhd:165]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-113] binding component instance 'cmp_obuf' to cell 'OBUFDS' [D:/Devel/projekty/TMS/lnls_out/import/fmc_dio5chttl.vhd:185]
+WARNING: [Synth 8-3848] Net fmc_out[ga0] in module/entity fmc_dio5chttl__parameterized0 does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/fmc_dio5chttl.vhd:48]
+WARNING: [Synth 8-3848] Net fmc_out[ga1] in module/entity fmc_dio5chttl__parameterized0 does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/fmc_dio5chttl.vhd:48]
+WARNING: [Synth 8-3848] Net fmc_out[scl] in module/entity fmc_dio5chttl__parameterized0 does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/fmc_dio5chttl.vhd:48]
+WARNING: [Synth 8-3848] Net fmc_out[sda] in module/entity fmc_dio5chttl__parameterized0 does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/fmc_dio5chttl.vhd:48]
+WARNING: [Synth 8-3848] Net fmc_out[pg_c2m] in module/entity fmc_dio5chttl__parameterized0 does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/fmc_dio5chttl.vhd:48]
+WARNING: [Synth 8-3848] Net fmc_out[pg_m2c] in module/entity fmc_dio5chttl__parameterized0 does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/fmc_dio5chttl.vhd:48]
+WARNING: [Synth 8-3848] Net fmc_out[prsnt_m2c_l] in module/entity fmc_dio5chttl__parameterized0 does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/fmc_dio5chttl.vhd:48]
+WARNING: [Synth 8-3848] Net fmc_out[HA_p] in module/entity fmc_dio5chttl__parameterized0 does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/fmc_dio5chttl.vhd:48]
+WARNING: [Synth 8-3848] Net fmc_out[HA_n] in module/entity fmc_dio5chttl__parameterized0 does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/fmc_dio5chttl.vhd:48]
+WARNING: [Synth 8-3848] Net fmc_out[HB_p] in module/entity fmc_dio5chttl__parameterized0 does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/fmc_dio5chttl.vhd:48]
+WARNING: [Synth 8-3848] Net fmc_out[HB_n] in module/entity fmc_dio5chttl__parameterized0 does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/fmc_dio5chttl.vhd:48]
+WARNING: [Synth 8-3848] Net fmc_out[CLK_DIR] in module/entity fmc_dio5chttl__parameterized0 does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/fmc_dio5chttl.vhd:48]
+WARNING: [Synth 8-3848] Net fmc_out[CLK_M2C_p] in module/entity fmc_dio5chttl__parameterized0 does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/fmc_dio5chttl.vhd:48]
+WARNING: [Synth 8-3848] Net fmc_out[CLK_M2C_n] in module/entity fmc_dio5chttl__parameterized0 does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/fmc_dio5chttl.vhd:48]
+WARNING: [Synth 8-3848] Net fmc_out[CLK_BIDIR_p] in module/entity fmc_dio5chttl__parameterized0 does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/fmc_dio5chttl.vhd:48]
+WARNING: [Synth 8-3848] Net fmc_out[CLK_BIDIR_n] in module/entity fmc_dio5chttl__parameterized0 does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/fmc_dio5chttl.vhd:48]
+WARNING: [Synth 8-3848] Net fmc_out[CLK_MGT_p] in module/entity fmc_dio5chttl__parameterized0 does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/fmc_dio5chttl.vhd:48]
+WARNING: [Synth 8-3848] Net fmc_out[CLK_MGT_n] in module/entity fmc_dio5chttl__parameterized0 does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/fmc_dio5chttl.vhd:48]
+WARNING: [Synth 8-3848] Net fmc_out[DP_p] in module/entity fmc_dio5chttl__parameterized0 does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/fmc_dio5chttl.vhd:48]
+WARNING: [Synth 8-3848] Net fmc_out[DP_n] in module/entity fmc_dio5chttl__parameterized0 does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/fmc_dio5chttl.vhd:48]
+WARNING: [Synth 8-3848] Net fmc_out[jtag][TCK] in module/entity fmc_dio5chttl__parameterized0 does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/fmc_dio5chttl.vhd:48]
+WARNING: [Synth 8-3848] Net fmc_out[jtag][TDI] in module/entity fmc_dio5chttl__parameterized0 does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/fmc_dio5chttl.vhd:48]
+WARNING: [Synth 8-3848] Net fmc_out[jtag][TDO] in module/entity fmc_dio5chttl__parameterized0 does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/fmc_dio5chttl.vhd:48]
+WARNING: [Synth 8-3848] Net fmc_out[jtag][TMS] in module/entity fmc_dio5chttl__parameterized0 does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/fmc_dio5chttl.vhd:48]
+WARNING: [Synth 8-3848] Net fmc_out[jtag][TRST_L] in module/entity fmc_dio5chttl__parameterized0 does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/fmc_dio5chttl.vhd:48]
+INFO: [Synth 8-256] done synthesizing module 'fmc_dio5chttl__parameterized0' (26#1) [D:/Devel/projekty/TMS/lnls_out/import/fmc_dio5chttl.vhd:58]
+INFO: [Synth 8-3491] module 'chipscope_ila' declared at 'D:/Devel/projekty/TMS/lnls_out/tms_master/tms_master.runs/synth_1/.Xil/Vivado-6564-SDPC117/realtime/chipscope_ila_stub.vhdl:5' bound to instance 'cmp_chipscope_ila_wbm_top' of component 'chipscope_ila' [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:3502]
+INFO: [Synth 8-638] synthesizing module 'chipscope_ila' [D:/Devel/projekty/TMS/lnls_out/tms_master/tms_master.runs/synth_1/.Xil/Vivado-6564-SDPC117/realtime/chipscope_ila_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'vio_boot' declared at 'D:/Devel/projekty/TMS/lnls_out/tms_master/tms_master.runs/synth_1/.Xil/Vivado-6564-SDPC117/realtime/vio_boot_stub.vhdl:5' bound to instance 'vio_boot_inst' of component 'vio_boot' [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:3553]
+INFO: [Synth 8-638] synthesizing module 'vio_boot' [D:/Devel/projekty/TMS/lnls_out/tms_master/tms_master.runs/synth_1/.Xil/Vivado-6564-SDPC117/realtime/vio_boot_stub.vhdl:14]
+WARNING: [Synth 8-3848] Net rs232_txd_o in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:77]
+WARNING: [Synth 8-3848] Net fmc1_term_o in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:98]
+WARNING: [Synth 8-3848] Net fmc1_oen_o in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:100]
+WARNING: [Synth 8-3848] Net fmc1_out_p in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:101]
+WARNING: [Synth 8-3848] Net fmc1_out_n in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:102]
+WARNING: [Synth 8-3848] Net fmc2_out[ga0] in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:111]
+WARNING: [Synth 8-3848] Net fmc2_out[ga1] in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:111]
+WARNING: [Synth 8-3848] Net fmc2_out[scl] in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:111]
+WARNING: [Synth 8-3848] Net fmc2_out[sda] in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:111]
+WARNING: [Synth 8-3848] Net fmc2_out[pg_c2m] in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:111]
+WARNING: [Synth 8-3848] Net fmc2_out[pg_m2c] in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:111]
+WARNING: [Synth 8-3848] Net fmc2_out[prsnt_m2c_l] in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:111]
+WARNING: [Synth 8-3848] Net fmc2_out[LA_p] in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:111]
+WARNING: [Synth 8-3848] Net fmc2_out[LA_n] in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:111]
+WARNING: [Synth 8-3848] Net fmc2_out[HA_p] in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:111]
+WARNING: [Synth 8-3848] Net fmc2_out[HA_n] in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:111]
+WARNING: [Synth 8-3848] Net fmc2_out[HB_p] in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:111]
+WARNING: [Synth 8-3848] Net fmc2_out[HB_n] in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:111]
+WARNING: [Synth 8-3848] Net fmc2_out[CLK_DIR] in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:111]
+WARNING: [Synth 8-3848] Net fmc2_out[CLK_M2C_p] in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:111]
+WARNING: [Synth 8-3848] Net fmc2_out[CLK_M2C_n] in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:111]
+WARNING: [Synth 8-3848] Net fmc2_out[CLK_BIDIR_p] in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:111]
+WARNING: [Synth 8-3848] Net fmc2_out[CLK_BIDIR_n] in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:111]
+WARNING: [Synth 8-3848] Net fmc2_out[CLK_MGT_p] in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:111]
+WARNING: [Synth 8-3848] Net fmc2_out[CLK_MGT_n] in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:111]
+WARNING: [Synth 8-3848] Net fmc2_out[DP_p] in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:111]
+WARNING: [Synth 8-3848] Net fmc2_out[DP_n] in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:111]
+WARNING: [Synth 8-3848] Net fmc2_out[jtag][TCK] in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:111]
+WARNING: [Synth 8-3848] Net fmc2_out[jtag][TDI] in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:111]
+WARNING: [Synth 8-3848] Net fmc2_out[jtag][TDO] in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:111]
+WARNING: [Synth 8-3848] Net fmc2_out[jtag][TMS] in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:111]
+WARNING: [Synth 8-3848] Net fmc2_out[jtag][TRST_L] in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:111]
+WARNING: [Synth 8-3848] Net fmc1_adc_pga_o in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:118]
+WARNING: [Synth 8-3848] Net fmc1_adc_shdn_o in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:119]
+WARNING: [Synth 8-3848] Net fmc1_adc_dith_o in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:120]
+WARNING: [Synth 8-3848] Net fmc1_adc_rand_o in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:121]
+WARNING: [Synth 8-3848] Net fmc1_trig_dir_o in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:149]
+WARNING: [Synth 8-3848] Net fmc1_trig_term_o in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:150]
+WARNING: [Synth 8-3848] Net fmc1_si571_oe_o in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:157]
+WARNING: [Synth 8-3848] Net fmc1_spi_ad9510_cs_o in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:160]
+WARNING: [Synth 8-3848] Net fmc1_spi_ad9510_sclk_o in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:161]
+WARNING: [Synth 8-3848] Net fmc1_spi_ad9510_mosi_o in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:162]
+WARNING: [Synth 8-3848] Net fmc1_pll_function_o in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:165]
+WARNING: [Synth 8-3848] Net fmc1_clk_sel_o in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:173]
+WARNING: [Synth 8-3848] Net fmc1_led1_int in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:631]
+WARNING: [Synth 8-3848] Net fmc1_led2_int in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:632]
+WARNING: [Synth 8-3848] Net fmc1_led3_int in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:633]
+WARNING: [Synth 8-3848] Net fmc2_adc_pga_o in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:197]
+WARNING: [Synth 8-3848] Net fmc2_adc_shdn_o in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:198]
+WARNING: [Synth 8-3848] Net fmc2_adc_dith_o in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:199]
+WARNING: [Synth 8-3848] Net fmc2_adc_rand_o in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:200]
+WARNING: [Synth 8-3848] Net fmc2_trig_dir_o in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:228]
+WARNING: [Synth 8-3848] Net fmc2_trig_term_o in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:229]
+WARNING: [Synth 8-3848] Net fmc2_si571_oe_o in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:236]
+WARNING: [Synth 8-3848] Net fmc2_spi_ad9510_cs_o in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:239]
+WARNING: [Synth 8-3848] Net fmc2_spi_ad9510_sclk_o in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:240]
+WARNING: [Synth 8-3848] Net fmc2_spi_ad9510_mosi_o in module/entity dbe_bpm_dsp does not have driver. [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:241]
+INFO: [Common 17-14] Message 'Synth 8-3848' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-256] done synthesizing module 'dbe_bpm_dsp' (27#1) [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:328]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port rs232_txd_o
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port fmc1_term_o[4]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port fmc1_term_o[3]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port fmc1_term_o[2]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port fmc1_term_o[1]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port fmc1_term_o[0]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port fmc1_oen_o[4]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port fmc1_oen_o[3]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port fmc1_oen_o[2]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port fmc1_oen_o[1]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port fmc1_oen_o[0]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port fmc1_out_p[4]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port fmc1_out_p[3]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port fmc1_out_p[2]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port fmc1_out_p[1]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port fmc1_out_p[0]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port fmc1_out_n[4]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port fmc1_out_n[3]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port fmc1_out_n[2]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port fmc1_out_n[1]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port fmc1_out_n[0]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[ga0] 
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[ga1] 
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[scl] 
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[sda] 
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[pg_c2m] 
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[pg_m2c] 
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[prsnt_m2c_l] 
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_p] [33]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_p] [32]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_p] [31]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_p] [30]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_p] [29]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_p] [28]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_p] [27]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_p] [26]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_p] [25]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_p] [24]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_p] [23]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_p] [22]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_p] [21]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_p] [20]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_p] [19]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_p] [18]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_p] [17]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_p] [16]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_p] [15]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_p] [14]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_p] [13]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_p] [12]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_p] [11]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_p] [10]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_p] [9]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_p] [8]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_p] [7]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_p] [6]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_p] [5]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_p] [4]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_p] [3]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_p] [2]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_p] [1]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_p] [0]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_n] [33]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_n] [32]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_n] [31]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_n] [30]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_n] [29]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_n] [28]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_n] [27]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_n] [26]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_n] [25]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_n] [24]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_n] [23]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_n] [22]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_n] [21]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_n] [20]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_n] [19]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_n] [18]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_n] [17]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_n] [16]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_n] [15]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_n] [14]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_n] [13]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_n] [12]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_n] [11]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_n] [10]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_n] [9]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_n] [8]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_n] [7]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_n] [6]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_n] [5]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_n] [4]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_n] [3]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_n] [2]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_n] [1]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[LA_n] [0]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[HA_p] [33]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[HA_p] [32]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[HA_p] [31]
+WARNING: [Synth 8-3331] design dbe_bpm_dsp has unconnected port \fmc2_out[HA_p] [30]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3917] design dbe_bpm_dsp has port vadj2_clk_updaten_o driven by constant 1
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 371.438 ; gain = 210.727
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin U_spi_link:\wb_master_i[int]  to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/spi2wbm_link_top.vhd:59]
+WARNING: [Synth 8-3295] tying undriven pin U_Adapter1:\master_i[int]  to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/xwb_dpram.vhd:86]
+WARNING: [Synth 8-3295] tying undriven pin U_Adapter:\master_i[err]  to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/wb_simple_uart.vhd:154]
+WARNING: [Synth 8-3295] tying undriven pin U_Adapter:\master_i[rty]  to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/wb_simple_uart.vhd:154]
+WARNING: [Synth 8-3295] tying undriven pin U_Adapter:\master_i[int]  to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/wb_simple_uart.vhd:154]
+WARNING: [Synth 8-3295] tying undriven pin U_WB_SLAVE:\regs_i[host_rdr_data_i] [7] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/wb_simple_uart.vhd:177]
+WARNING: [Synth 8-3295] tying undriven pin U_WB_SLAVE:\regs_i[host_rdr_data_i] [6] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/wb_simple_uart.vhd:177]
+WARNING: [Synth 8-3295] tying undriven pin U_WB_SLAVE:\regs_i[host_rdr_data_i] [5] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/wb_simple_uart.vhd:177]
+WARNING: [Synth 8-3295] tying undriven pin U_WB_SLAVE:\regs_i[host_rdr_data_i] [4] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/wb_simple_uart.vhd:177]
+WARNING: [Synth 8-3295] tying undriven pin U_WB_SLAVE:\regs_i[host_rdr_data_i] [3] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/wb_simple_uart.vhd:177]
+WARNING: [Synth 8-3295] tying undriven pin U_WB_SLAVE:\regs_i[host_rdr_data_i] [2] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/wb_simple_uart.vhd:177]
+WARNING: [Synth 8-3295] tying undriven pin U_WB_SLAVE:\regs_i[host_rdr_data_i] [1] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/wb_simple_uart.vhd:177]
+WARNING: [Synth 8-3295] tying undriven pin U_WB_SLAVE:\regs_i[host_rdr_data_i] [0] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/wb_simple_uart.vhd:177]
+WARNING: [Synth 8-3295] tying undriven pin U_WB_SLAVE:\regs_i[host_rdr_rdy_i]  to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/wb_simple_uart.vhd:177]
+WARNING: [Synth 8-3295] tying undriven pin U_WB_SLAVE:\regs_i[host_rdr_count_i] [15] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/wb_simple_uart.vhd:177]
+WARNING: [Synth 8-3295] tying undriven pin U_WB_SLAVE:\regs_i[host_rdr_count_i] [14] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/wb_simple_uart.vhd:177]
+WARNING: [Synth 8-3295] tying undriven pin U_WB_SLAVE:\regs_i[host_rdr_count_i] [13] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/wb_simple_uart.vhd:177]
+WARNING: [Synth 8-3295] tying undriven pin U_WB_SLAVE:\regs_i[host_rdr_count_i] [12] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/wb_simple_uart.vhd:177]
+WARNING: [Synth 8-3295] tying undriven pin U_WB_SLAVE:\regs_i[host_rdr_count_i] [11] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/wb_simple_uart.vhd:177]
+WARNING: [Synth 8-3295] tying undriven pin U_WB_SLAVE:\regs_i[host_rdr_count_i] [10] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/wb_simple_uart.vhd:177]
+WARNING: [Synth 8-3295] tying undriven pin U_WB_SLAVE:\regs_i[host_rdr_count_i] [9] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/wb_simple_uart.vhd:177]
+WARNING: [Synth 8-3295] tying undriven pin U_WB_SLAVE:\regs_i[host_rdr_count_i] [8] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/wb_simple_uart.vhd:177]
+WARNING: [Synth 8-3295] tying undriven pin U_WB_SLAVE:\regs_i[host_rdr_count_i] [7] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/wb_simple_uart.vhd:177]
+WARNING: [Synth 8-3295] tying undriven pin U_WB_SLAVE:\regs_i[host_rdr_count_i] [6] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/wb_simple_uart.vhd:177]
+WARNING: [Synth 8-3295] tying undriven pin U_WB_SLAVE:\regs_i[host_rdr_count_i] [5] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/wb_simple_uart.vhd:177]
+WARNING: [Synth 8-3295] tying undriven pin U_WB_SLAVE:\regs_i[host_rdr_count_i] [4] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/wb_simple_uart.vhd:177]
+WARNING: [Synth 8-3295] tying undriven pin U_WB_SLAVE:\regs_i[host_rdr_count_i] [3] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/wb_simple_uart.vhd:177]
+WARNING: [Synth 8-3295] tying undriven pin U_WB_SLAVE:\regs_i[host_rdr_count_i] [2] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/wb_simple_uart.vhd:177]
+WARNING: [Synth 8-3295] tying undriven pin U_WB_SLAVE:\regs_i[host_rdr_count_i] [1] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/wb_simple_uart.vhd:177]
+WARNING: [Synth 8-3295] tying undriven pin U_WB_SLAVE:\regs_i[host_rdr_count_i] [0] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/wb_simple_uart.vhd:177]
+WARNING: [Synth 8-3295] tying undriven pin U_Adapter:\master_i[err]  to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/wb_tics.vhd:93]
+WARNING: [Synth 8-3295] tying undriven pin U_Adapter:\master_i[rty]  to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/wb_tics.vhd:93]
+WARNING: [Synth 8-3295] tying undriven pin U_Adapter:\master_i[stall]  to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/wb_tics.vhd:93]
+WARNING: [Synth 8-3295] tying undriven pin U_Adapter:\master_i[int]  to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/wb_tics.vhd:93]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[5][ack]  to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[5][err]  to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[5][rty]  to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[5][stall]  to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[5][int]  to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[5][dat] [31] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[5][dat] [30] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[5][dat] [29] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[5][dat] [28] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[5][dat] [27] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[5][dat] [26] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[5][dat] [25] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[5][dat] [24] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[5][dat] [23] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[5][dat] [22] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[5][dat] [21] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[5][dat] [20] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[5][dat] [19] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[5][dat] [18] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[5][dat] [17] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[5][dat] [16] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[5][dat] [15] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[5][dat] [14] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[5][dat] [13] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[5][dat] [12] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[5][dat] [11] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[5][dat] [10] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[5][dat] [9] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[5][dat] [8] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[5][dat] [7] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[5][dat] [6] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[5][dat] [5] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[5][dat] [4] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[5][dat] [3] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[5][dat] [2] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[5][dat] [1] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[5][dat] [0] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[4][ack]  to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[4][err]  to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[4][rty]  to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[4][stall]  to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[4][int]  to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[4][dat] [31] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[4][dat] [30] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[4][dat] [29] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[4][dat] [28] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[4][dat] [27] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[4][dat] [26] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[4][dat] [25] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[4][dat] [24] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[4][dat] [23] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[4][dat] [22] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[4][dat] [21] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[4][dat] [20] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[4][dat] [19] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[4][dat] [18] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[4][dat] [17] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[4][dat] [16] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[4][dat] [15] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[4][dat] [14] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[4][dat] [13] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[4][dat] [12] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[4][dat] [11] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[4][dat] [10] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[4][dat] [9] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+WARNING: [Synth 8-3295] tying undriven pin cmp_interconnect:\master_i[4][dat] [8] to constant 0 [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.vhd:1293]
+INFO: [Common 17-14] Message 'Synth 8-3295' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 371.438 ; gain = 210.727
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 12 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Loading clock regions from D:/DevelProgs/Xilinx/Vivado/2014.4/data\parts/xilinx/artix7/artix7/xc7a200t/ClockRegion.xml
+Loading clock buffers from D:/DevelProgs/Xilinx/Vivado/2014.4/data\parts/xilinx/artix7/artix7/xc7a200t/ClockBuffers.xml
+Loading clock placement rules from D:/DevelProgs/Xilinx/Vivado/2014.4/data/parts/xilinx/artix7/ClockPlacerRules.xml
+Loading package pin functions from D:/DevelProgs/Xilinx/Vivado/2014.4/data\parts/xilinx/artix7/PinFunctions.xml...
+Loading package from D:/DevelProgs/Xilinx/Vivado/2014.4/data\parts/xilinx/artix7/artix7/xc7a200t/ffg1156/Package.xml
+Loading io standards from D:/DevelProgs/Xilinx/Vivado/2014.4/data\./parts/xilinx/artix7/IOStandards.xml
+Loading device configuration modes from D:/DevelProgs/Xilinx/Vivado/2014.4/data\parts/xilinx/artix7/ConfigModes.xml
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.xdc]
+Finished Parsing XDC File [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.xdc]
+INFO: [Timing 38-2] Deriving generated clocks
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Devel/projekty/TMS/lnls_out/import/dbe_bpm_dsp.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/dbe_bpm_dsp_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/dbe_bpm_dsp_propImpl.xdc] to anoth XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 6 instances were transformed.
+  IBUFGDS => IBUFDS: 1 instances
+  OBUFDS => OBUFDS: 5 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 664.723 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 664.723 ; gain = 504.012
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a200tffg1156-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 664.723 ; gain = 504.012
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 664.723 ; gain = 504.012
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'spi2wbm_link'
+INFO: [Synth 8-802] inferred FSM for state register 'r_dpram_address_counter_reg' in module 'spi2wbm_link'
+ROM "bit_count" won't be mapped to Block RAM because address size (4) smaller than threshold (5) 
+ROM "r_rdid_hit" won't be mapped to RAM because it is too sparse.
+ROM "s_wbone_address" won't be mapped to Block RAM because address size (3) smaller than threshold (5) 
+ROM "r_wbone_en" won't be mapped to Block RAM because address size (3) smaller than threshold (5) 
+ROM "p_24_in" won't be mapped to Block RAM because address size (3) smaller than threshold (5) 
+ROM "p_23_in" won't be mapped to RAM because it is too sparse.
+ROM "p_13_in" won't be mapped to RAM because it is too sparse.
+ROM "p_17_in" won't be mapped to RAM because it is too sparse.
+ROM "p_27_in" won't be mapped to RAM because it is too sparse.
+ROM "s_shift_data_in" won't be mapped to Block RAM because address size (3) smaller than threshold (5) 
+ROM "s_latch_data_in" won't be mapped to Block RAM because address size (3) smaller than threshold (5) 
+ROM "s_latch_data_out" won't be mapped to Block RAM because address size (3) smaller than threshold (5) 
+ROM "s_shift_data_out" won't be mapped to Block RAM because address size (3) smaller than threshold (5) 
+ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5) 
+ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5) 
+ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5) 
+ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5) 
+ROM "state" won't be mapped to Block RAM because address size (4) smaller than threshold (5) 
+ROM "state" won't be mapped to Block RAM because address size (4) smaller than threshold (5) 
+ROM "s_dpram_address" won't be mapped to Block RAM because address size (2) smaller than threshold (5) 
+ROM "s_dpram_address" won't be mapped to Block RAM because address size (2) smaller than threshold (5) 
+ROM "rom" won't be mapped to RAM because it is too sparse.
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_async_tx'
+ROM "TxD_ready" won't be mapped to Block RAM because address size (4) smaller than threshold (5) 
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_async_rx'
+ROM "RxD_bit_inv" won't be mapped to Block RAM because address size (2) smaller than threshold (5) 
+ROM "RxD_bit_inv" won't be mapped to Block RAM because address size (2) smaller than threshold (5) 
+ROM "next_bit" won't be mapped to Block RAM because address size (4) smaller than threshold (5) 
+ROM "bit_spacing" won't be mapped to Block RAM because address size (4) smaller than threshold (5) 
+INFO: [Synth 8-4471] merging register 'sync_posedge.synced_o_reg' into 'sync_posedge.sync2_reg' [D:/Devel/projekty/TMS/lnls_out/import/gc_sync_ffs.vhd:76]
+ROM "sel" won't be mapped to Block RAM because address size (4) smaller than threshold (5) 
+ROM "cntr_overflow" won't be mapped to RAM because address size (24) is larger than maximum supported(18) 
+ROM "r_trigger" won't be mapped to Block RAM because address size (3) smaller than threshold (5) 
+ROM "r_mode" won't be mapped to Block RAM because address size (3) smaller than threshold (5) 
+ROM "r_prescaller" won't be mapped to Block RAM because address size (3) smaller than threshold (5) 
+ROM "sel" won't be mapped to Block RAM because address size (4) smaller than threshold (5) 
+ROM "sel" won't be mapped to Block RAM because address size (4) smaller than threshold (5) 
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'spi2wbm_link'
+INFO: [Synth 8-3354] encoded FSM with state register 'r_dpram_address_counter_reg' using encoding 'one-hot' in module 'spi2wbm_link'
+WARNING: [Synth 8-327] inferring latch for variable 's_bweb_reg' [D:/Devel/projekty/TMS/lnls_out/import/spi2wbm_link.vhd:502]
+INFO: [Synth 8-3971] The signal gen_with_byte_enable_readfirst.ram_reg was recognized as a true dual port RAM template.
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'uart_async_tx'
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'uart_async_rx'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 664.723 ; gain = 504.012
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+	   2 Input     24 Bit       Adders := 1     
+	   2 Input     17 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 8     
+	   2 Input      5 Bit         XORs := 2     
++---Registers : 
+	               32 Bit    Registers := 34    
+	               24 Bit    Registers := 2     
+	               17 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 11    
+	                4 Bit    Registers := 4     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 187   
++---RAMs : 
+	             128K Bit         RAMs := 1     
++---Muxes : 
+	 129 Input     32 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 22    
+	   4 Input     32 Bit        Muxes := 6     
+	   5 Input     32 Bit        Muxes := 1     
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 10    
+	   4 Input      8 Bit        Muxes := 1     
+	   5 Input      8 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 20    
+	   2 Input      5 Bit        Muxes := 1     
+	   5 Input      5 Bit        Muxes := 1     
+	   4 Input      5 Bit        Muxes := 1     
+	   8 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   4 Input      4 Bit        Muxes := 1     
+	  13 Input      4 Bit        Muxes := 1     
+	  14 Input      4 Bit        Muxes := 1     
+	  10 Input      4 Bit        Muxes := 1     
+	  11 Input      4 Bit        Muxes := 1     
+	  17 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 131   
+	   8 Input      1 Bit        Muxes := 2     
+	   6 Input      1 Bit        Muxes := 26    
+	   4 Input      1 Bit        Muxes := 4     
+	   5 Input      1 Bit        Muxes := 4     
+	   7 Input      1 Bit        Muxes := 6     
+	  13 Input      1 Bit        Muxes := 1     
+	  10 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module dbe_bpm_dsp 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module clk_gen 
+Detailed RTL Component Info : 
+Module sys_pll__parameterized0 
+Detailed RTL Component Info : 
+Module sdb_rom__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	 129 Input     32 Bit        Muxes := 1     
+Module xwb_crossbar__parameterized0 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input     32 Bit         XORs := 3     
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module xwb_sdb_crossbar__parameterized0 
+Detailed RTL Component Info : 
+Module spi_multiplexer__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 28    
+Module spi2wbm_link 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 7     
+	               24 Bit    Registers := 1     
+	                8 Bit    Registers := 6     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 14    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 14    
+	   4 Input     32 Bit        Muxes := 2     
+	   5 Input     32 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 10    
+	   4 Input      8 Bit        Muxes := 1     
+	   5 Input      8 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   5 Input      5 Bit        Muxes := 1     
+	   4 Input      5 Bit        Muxes := 1     
+	   8 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	  17 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 39    
+	   8 Input      1 Bit        Muxes := 2     
+	   6 Input      1 Bit        Muxes := 6     
+	   4 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 4     
+Module wb_slave_adapter__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module spi2wbm_link_top 
+Detailed RTL Component Info : 
+Module wb_slave_adapter__parameterized2 
+Detailed RTL Component Info : 
+Module generic_dpram_sameclock__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
++---RAMs : 
+	             128K Bit         RAMs := 1     
+Module generic_dpram__parameterized0 
+Detailed RTL Component Info : 
+Module xwb_dpram_raw__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+Module sdb_rom__parameterized2 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	 129 Input     32 Bit        Muxes := 1     
+Module xwb_crossbar__parameterized2 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input     32 Bit         XORs := 5     
++---Registers : 
+	                1 Bit    Registers := 2     
+Module xwb_sdb_crossbar__parameterized2 
+Detailed RTL Component Info : 
+Module wb_slave_adapter__parameterized4 
+Detailed RTL Component Info : 
+Module simple_uart_wb 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   7 Input      1 Bit        Muxes := 6     
+	   2 Input      1 Bit        Muxes := 8     
+Module uart_baud_gen__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 1     
++---Registers : 
+	               17 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+Module uart_async_tx 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	  13 Input      4 Bit        Muxes := 1     
+	  14 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	  13 Input      1 Bit        Muxes := 1     
+Module uart_async_rx 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	  10 Input      4 Bit        Muxes := 1     
+	  11 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 7     
+	  10 Input      1 Bit        Muxes := 1     
+Module wb_simple_uart__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module xwb_simple_uart__parameterized0 
+Detailed RTL Component Info : 
+Module gc_sync_ffs__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 5     
+Module wb_gpio_port__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 5     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   4 Input     32 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 10    
+	   6 Input      1 Bit        Muxes := 5     
+Module xwb_gpio_port__parameterized0 
+Detailed RTL Component Info : 
+Module wb_slave_adapter__parameterized6 
+Detailed RTL Component Info : 
+Module wb_tics__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     24 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 3     
+	               24 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 5     
+Module xwb_tics__parameterized0 
+Detailed RTL Component Info : 
+Module wb_gpio_port__parameterized2 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 5     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 2     
+	   8 Input      8 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 10    
+	   6 Input      1 Bit        Muxes := 5     
+Module xwb_gpio_port__parameterized2 
+Detailed RTL Component Info : 
+Module wb_dbe_periph__parameterized0 
+Detailed RTL Component Info : 
+Module xwb_dbe_periph__parameterized0 
+Detailed RTL Component Info : 
+Module wb_gpio_port__parameterized4 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 5     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   4 Input     32 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 7     
+	   6 Input      1 Bit        Muxes := 5     
+Module xwb_gpio_port__parameterized4 
+Detailed RTL Component Info : 
+Module fmc_dio5chttl__parameterized0 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      5 Bit         XORs := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 740 (col length:100)
+BRAMs: 730 (col length: RAMB18 100 RAMB36 50)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 664.723 ; gain = 504.012
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+ROM "U_spi_link/s_wbone_address" won't be mapped to Block RAM because address size (3) smaller than threshold (5) 
+ROM "U_spi_link/p_27_in" won't be mapped to RAM because it is too sparse.
+ROM "U_spi_link/p_23_in" won't be mapped to RAM because it is too sparse.
+ROM "U_spi_link/r_rdid_hit" won't be mapped to RAM because it is too sparse.
+ROM "U_spi_link/p_13_in" won't be mapped to RAM because it is too sparse.
+ROM "U_spi_link/p_17_in" won't be mapped to RAM because it is too sparse.
+ROM "U_Tics/cntr_overflow" won't be mapped to RAM because address size (24) is larger than maximum supported(18) 
+WARNING: [Synth 8-3917] design dbe_bpm_dsp has port vadj2_clk_updaten_o driven by constant 1
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 664.723 ; gain = 504.012
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 664.723 ; gain = 504.012
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+INFO: [Synth 8-3971] The signal U_DPRAM/gen_single_clk.U_RAM_SC/gen_with_byte_enable_readfirst.ram_reg was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------
+Start RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM:
++--------------+------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+--------------+--------+--------+-------------------------------------+
+|Module Name   | RTL Object                                                             | PORT A (depth X width) | W | R | PORT B (depth X width) | W | R | OUT_REG      | RAMB18 | RAMB36 | Hierarchical Name                   | 
++--------------+------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+--------------+--------+--------+-------------------------------------+
+|xwb_dpram_raw | U_DPRAM/gen_single_clk.U_RAM_SC/gen_with_byte_enable_readfirst.ram_reg | 4 K X 32(READ_FIRST)   | W | R | 4 K X 32(READ_FIRST)   | W | R | Port A and B | 0      | 4      | dbe_bpm_dsp/xwb_dpram_raw/extram__2 | 
++--------------+------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+--------------+--------+--------+-------------------------------------+
+
+Note: The table shows RAMs generated at current stage. Some RAM generation could be reversed due to later optimizations. Multiple instantiated RAMs are reported only once. "Hierarchical Name" reflects the hierarchical modules names of the RAM and only part of it is displayed.
+---------------------------------------------------------------------------------
+Finished RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cmp_xwb_dbe_periph/\cmp_wb_dbe_periph/cmp_uart/U_Wrapped_UART/gen_phys_uart.U_RX/RxD_sync_inv_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cmp_xwb_dbe_periph/\cmp_wb_dbe_periph/cmp_buttons/Wrapped_GPIO/GEN_SYNC_FFS[7].INPUT_SYNC/sync_posedge.sync0_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cmp_xwb_dbe_periph/\cmp_wb_dbe_periph/cmp_uart/U_Wrapped_UART/U_WB_SLAVE/rddata_reg_reg[31] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (cmp_xwb_dbe_periph/\cmp_wb_dbe_periph/cmp_xwb_tics/U_Tics/cntr_tic_len_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cmp_xwb_dbe_periph/\cmp_wb_dbe_periph/cmp_xwb_tics/U_Tics/cntr_tic_len_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cmp_interconnect/\crossbar/matrix_old_reg[0,4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cmp_interconnect/\crossbar/matrix_old_reg[0,5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cmp_interconnect/\crossbar/matrix_old_reg[0,3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cmp_xwb_dbe_periph/\cmp_wb_dbe_periph/cmp_interconnect/crossbar/matrix_old_reg[0,5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\cmp_spi_multiplexer/r_group_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cmp_xwb_dbe_periph/\cmp_wb_dbe_periph/cmp_uart/U_Wrapped_UART/gen_phys_uart.U_RX/RxD_sync_inv_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cmp_xwb_dbe_periph/\cmp_wb_dbe_periph/cmp_buttons/Wrapped_GPIO/GEN_SYNC_FFS[7].INPUT_SYNC/sync_posedge.sync0_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cmp_xwb_dbe_periph/\cmp_wb_dbe_periph/cmp_interconnect/rom/adr_reg_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (cmp_xwb_dbe_periph/\cmp_wb_dbe_periph/cmp_buttons/Wrapped_GPIO/GEN_SYNC_FFS[7].INPUT_SYNC/sync_posedge.sync0_reg )
+WARNING: [Synth 8-3332] Sequential element (\crossbar/matrix_old_reg[0,3] ) is unused and will be removed from module xwb_sdb_crossbar__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (\crossbar/matrix_old_reg[0,4] ) is unused and will be removed from module xwb_sdb_crossbar__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (\crossbar/matrix_old_reg[0,5] ) is unused and will be removed from module xwb_sdb_crossbar__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_bweb_reg[3] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_bweb_reg[2] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_bweb_reg[1] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_bweb_reg[0] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/r_command_reg[7] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/r_command_reg[6] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/r_command_reg[3] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_dpram_address_reg[31] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_dpram_address_reg[30] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_dpram_address_reg[29] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_dpram_address_reg[28] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_dpram_address_reg[27] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_dpram_address_reg[26] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_dpram_address_reg[25] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_dpram_address_reg[24] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_dpram_address_reg[23] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_dpram_address_reg[22] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_dpram_address_reg[21] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_dpram_address_reg[20] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_dpram_address_reg[19] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_dpram_address_reg[18] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_dpram_address_reg[17] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_dpram_address_reg[16] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_dpram_address_reg[15] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_dpram_address_reg[14] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_dpram_address_reg[13] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_dpram_address_reg[12] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_dpram_address_reg[11] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_dpram_address_reg[10] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_dpram_addr_reg[31] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_dpram_addr_reg[30] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_dpram_addr_reg[29] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_dpram_addr_reg[28] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_dpram_addr_reg[27] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_dpram_addr_reg[26] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_dpram_addr_reg[25] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_dpram_addr_reg[24] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_dpram_addr_reg[23] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_dpram_addr_reg[22] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_dpram_addr_reg[21] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_dpram_addr_reg[20] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_dpram_addr_reg[19] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_dpram_addr_reg[18] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_dpram_addr_reg[17] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_dpram_addr_reg[16] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_dpram_addr_reg[15] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_dpram_addr_reg[14] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_dpram_addr_reg[13] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_dpram_addr_reg[12] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_dpram_addr_reg[11] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_dpram_addr_reg[10] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/wb_master_output_reg[sel][2] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/wb_master_output_reg[sel][1] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/wb_master_output_reg[sel][0] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_wishbone_data_in_reg[31] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_wishbone_data_in_reg[30] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_wishbone_data_in_reg[29] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_wishbone_data_in_reg[28] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_wishbone_data_in_reg[27] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_wishbone_data_in_reg[26] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_wishbone_data_in_reg[25] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/s_wishbone_data_in_reg[24] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/r_rdid_shift_reg[2] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/r_rdid_shift_reg[3] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/r_rdid_shift_reg[6] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\U_spi_link/r_rdid_shift_reg[7] ) is unused and will be removed from module spi2wbm_link_top.
+WARNING: [Synth 8-3332] Sequential element (\cmp_wb_dbe_periph/cmp_interconnect/crossbar/matrix_old_reg[0,5] ) is unused and will be removed from module xwb_dbe_periph__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (\cmp_wb_dbe_periph/cmp_interconnect/rom/adr_reg_reg[0] ) is unused and will be removed from module xwb_dbe_periph__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (\cmp_wb_dbe_periph/cmp_interconnect/rom/slave_o_reg[ack] ) is unused and will be removed from module xwb_dbe_periph__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (\cmp_wb_dbe_periph/cmp_interconnect/rom/adr_reg_reg[6] ) is unused and will be removed from module xwb_dbe_periph__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (\cmp_wb_dbe_periph/cmp_interconnect/rom/adr_reg_reg[4] ) is unused and will be removed from module xwb_dbe_periph__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (\cmp_wb_dbe_periph/cmp_interconnect/rom/adr_reg_reg[5] ) is unused and will be removed from module xwb_dbe_periph__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (\cmp_wb_dbe_periph/cmp_interconnect/rom/adr_reg_reg[3] ) is unused and will be removed from module xwb_dbe_periph__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (\cmp_wb_dbe_periph/cmp_interconnect/rom/adr_reg_reg[1] ) is unused and will be removed from module xwb_dbe_periph__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (\cmp_wb_dbe_periph/cmp_interconnect/rom/adr_reg_reg[2] ) is unused and will be removed from module xwb_dbe_periph__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (\cmp_wb_dbe_periph/cmp_uart/U_Wrapped_UART/U_WB_SLAVE/ack_sreg_reg[6] ) is unused and will be removed from module xwb_dbe_periph__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (\cmp_wb_dbe_periph/cmp_uart/U_Wrapped_UART/U_WB_SLAVE/ack_sreg_reg[5] ) is unused and will be removed from module xwb_dbe_periph__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (\cmp_wb_dbe_periph/cmp_uart/U_Wrapped_UART/U_WB_SLAVE/ack_sreg_reg[4] ) is unused and will be removed from module xwb_dbe_periph__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (\cmp_wb_dbe_periph/cmp_uart/U_Wrapped_UART/U_WB_SLAVE/ack_sreg_reg[3] ) is unused and will be removed from module xwb_dbe_periph__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (\cmp_wb_dbe_periph/cmp_uart/U_Wrapped_UART/U_WB_SLAVE/ack_sreg_reg[2] ) is unused and will be removed from module xwb_dbe_periph__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (\cmp_wb_dbe_periph/cmp_uart/U_Wrapped_UART/U_WB_SLAVE/ack_sreg_reg[1] ) is unused and will be removed from module xwb_dbe_periph__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (\cmp_wb_dbe_periph/cmp_uart/U_Wrapped_UART/U_WB_SLAVE/rddata_reg_reg[31] ) is unused and will be removed from module xwb_dbe_periph__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (\cmp_wb_dbe_periph/cmp_uart/U_Wrapped_UART/U_WB_SLAVE/rddata_reg_reg[30] ) is unused and will be removed from module xwb_dbe_periph__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (\cmp_wb_dbe_periph/cmp_uart/U_Wrapped_UART/U_WB_SLAVE/rddata_reg_reg[29] ) is unused and will be removed from module xwb_dbe_periph__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (\cmp_wb_dbe_periph/cmp_uart/U_Wrapped_UART/U_WB_SLAVE/rddata_reg_reg[28] ) is unused and will be removed from module xwb_dbe_periph__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (\cmp_wb_dbe_periph/cmp_uart/U_Wrapped_UART/U_WB_SLAVE/rddata_reg_reg[27] ) is unused and will be removed from module xwb_dbe_periph__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (\cmp_wb_dbe_periph/cmp_uart/U_Wrapped_UART/U_WB_SLAVE/rddata_reg_reg[26] ) is unused and will be removed from module xwb_dbe_periph__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (\cmp_wb_dbe_periph/cmp_uart/U_Wrapped_UART/U_WB_SLAVE/rddata_reg_reg[25] ) is unused and will be removed from module xwb_dbe_periph__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (\cmp_wb_dbe_periph/cmp_uart/U_Wrapped_UART/U_WB_SLAVE/rddata_reg_reg[24] ) is unused and will be removed from module xwb_dbe_periph__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (\cmp_wb_dbe_periph/cmp_uart/U_Wrapped_UART/U_WB_SLAVE/rddata_reg_reg[23] ) is unused and will be removed from module xwb_dbe_periph__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (\cmp_wb_dbe_periph/cmp_uart/U_Wrapped_UART/U_WB_SLAVE/rddata_reg_reg[22] ) is unused and will be removed from module xwb_dbe_periph__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (\cmp_wb_dbe_periph/cmp_uart/U_Wrapped_UART/U_WB_SLAVE/rddata_reg_reg[21] ) is unused and will be removed from module xwb_dbe_periph__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (\cmp_wb_dbe_periph/cmp_uart/U_Wrapped_UART/U_WB_SLAVE/rddata_reg_reg[20] ) is unused and will be removed from module xwb_dbe_periph__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (\cmp_wb_dbe_periph/cmp_uart/U_Wrapped_UART/U_WB_SLAVE/rddata_reg_reg[19] ) is unused and will be removed from module xwb_dbe_periph__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (\cmp_wb_dbe_periph/cmp_uart/U_Wrapped_UART/U_WB_SLAVE/rddata_reg_reg[18] ) is unused and will be removed from module xwb_dbe_periph__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (\cmp_wb_dbe_periph/cmp_uart/U_Wrapped_UART/U_WB_SLAVE/rddata_reg_reg[17] ) is unused and will be removed from module xwb_dbe_periph__parameterized0.
+WARNING: [Synth 8-3332] Sequential element (\cmp_wb_dbe_periph/cmp_uart/U_Wrapped_UART/U_WB_SLAVE/rddata_reg_reg[16] ) is unused and will be removed from module xwb_dbe_periph__parameterized0.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 664.723 ; gain = 504.012
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 664.723 ; gain = 504.012
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 664.723 ; gain = 504.012
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 664.723 ; gain = 504.012
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 664.723 ; gain = 504.012
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3971] The signal U_DPRAM/gen_single_clk.U_RAM_SC/gen_with_byte_enable_readfirst.ram_reg was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:55 ; elapsed = 00:00:58 . Memory (MB): peak = 664.723 ; gain = 504.012
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance \U_DPRAM/gen_single_clk.U_RAM_SC/gen_with_byte_enable_readfirst.ram_reg_0  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance \U_DPRAM/gen_single_clk.U_RAM_SC/gen_with_byte_enable_readfirst.ram_reg_0  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance \U_DPRAM/gen_single_clk.U_RAM_SC/gen_with_byte_enable_readfirst.ram_reg_1  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance \U_DPRAM/gen_single_clk.U_RAM_SC/gen_with_byte_enable_readfirst.ram_reg_1  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance \U_DPRAM/gen_single_clk.U_RAM_SC/gen_with_byte_enable_readfirst.ram_reg_2  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance \U_DPRAM/gen_single_clk.U_RAM_SC/gen_with_byte_enable_readfirst.ram_reg_2  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance \U_DPRAM/gen_single_clk.U_RAM_SC/gen_with_byte_enable_readfirst.ram_reg_3  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance \U_DPRAM/gen_single_clk.U_RAM_SC/gen_with_byte_enable_readfirst.ram_reg_3  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:57 ; elapsed = 00:01:01 . Memory (MB): peak = 664.723 ; gain = 504.012
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:58 ; elapsed = 00:01:02 . Memory (MB): peak = 664.723 ; gain = 504.012
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:58 ; elapsed = 00:01:02 . Memory (MB): peak = 664.723 ; gain = 504.012
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:58 ; elapsed = 00:01:02 . Memory (MB): peak = 664.723 ; gain = 504.012
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |chipscope_ila |         1|
+|2     |vio_boot      |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+-------------------+------+
+|      |Cell               |Count |
++------+-------------------+------+
+|1     |chipscope_ila_bbox |     1|
+|2     |vio_boot_bbox      |     1|
+|3     |BUFG               |     4|
+|4     |CARRY4             |    38|
+|5     |INV                |    16|
+|6     |LUT1               |   220|
+|7     |LUT2               |   455|
+|8     |LUT3               |    74|
+|9     |LUT4               |   110|
+|10    |LUT5               |   208|
+|11    |LUT6               |   309|
+|12    |PLLE2_ADV          |     1|
+|13    |RAMB36E1           |     4|
+|14    |FDCE               |    85|
+|15    |FDPE               |     1|
+|16    |FDRE               |   837|
+|17    |FDSE               |   101|
+|18    |IBUF               |     5|
+|19    |IBUFDS             |     5|
+|20    |IBUFGDS            |     1|
+|21    |IOBUF              |     8|
+|22    |OBUF               |    20|
+|23    |OBUFDS             |     5|
+|24    |OBUFT              |   521|
++------+-------------------+------+
+
+Report Instance Areas: 
++------+---------------------------------------+----------------------------------------+------+
+|      |Instance                               |Module                                  |Cells |
++------+---------------------------------------+----------------------------------------+------+
+|1     |top                                    |                                        |  3036|
+|2     |  cmp_sys_pll_inst                     |sys_pll__parameterized0                 |     4|
+|3     |  cmp_interconnect                     |xwb_sdb_crossbar__parameterized0        |   309|
+|4     |    crossbar                           |xwb_crossbar__parameterized0            |   211|
+|5     |    rom                                |sdb_rom__parameterized0                 |    98|
+|6     |  cmp_spi2wbm_link_top                 |spi2wbm_link_top                        |   635|
+|7     |    U_spi_link                         |spi2wbm_link                            |   525|
+|8     |    cmp_spi_slave_adapter              |wb_slave_adapter__parameterized0        |     3|
+|9     |  cmp_ram                              |xwb_dpram_raw__parameterized0           |    14|
+|10    |    U_DPRAM                            |generic_dpram__parameterized0           |    12|
+|11    |      \gen_single_clk.U_RAM_SC         |generic_dpram_sameclock__parameterized0 |    12|
+|12    |  cmp_xwb_dbe_periph                   |xwb_dbe_periph__parameterized0          |  1311|
+|13    |    cmp_wb_dbe_periph                  |wb_dbe_periph__parameterized0           |  1287|
+|14    |      cmp_buttons                      |xwb_gpio_port__parameterized0           |   129|
+|15    |        Wrapped_GPIO                   |wb_gpio_port__parameterized0_21         |   129|
+|16    |      cmp_interconnect                 |xwb_sdb_crossbar__parameterized2        |   304|
+|17    |        crossbar                       |xwb_crossbar__parameterized2            |   304|
+|18    |      cmp_leds                         |xwb_gpio_port__parameterized0_4         |   189|
+|19    |        Wrapped_GPIO                   |wb_gpio_port__parameterized0            |   189|
+|20    |          \GEN_SYNC_FFS[0].INPUT_SYNC  |gc_sync_ffs__parameterized0_13          |     5|
+|21    |          \GEN_SYNC_FFS[1].INPUT_SYNC  |gc_sync_ffs__parameterized0_14          |     5|
+|22    |          \GEN_SYNC_FFS[2].INPUT_SYNC  |gc_sync_ffs__parameterized0_15          |     5|
+|23    |          \GEN_SYNC_FFS[3].INPUT_SYNC  |gc_sync_ffs__parameterized0_16          |     5|
+|24    |          \GEN_SYNC_FFS[4].INPUT_SYNC  |gc_sync_ffs__parameterized0_17          |     5|
+|25    |          \GEN_SYNC_FFS[5].INPUT_SYNC  |gc_sync_ffs__parameterized0_18          |     5|
+|26    |          \GEN_SYNC_FFS[6].INPUT_SYNC  |gc_sync_ffs__parameterized0_19          |     5|
+|27    |          \GEN_SYNC_FFS[7].INPUT_SYNC  |gc_sync_ffs__parameterized0_20          |     5|
+|28    |      cmp_mlvds                        |xwb_gpio_port__parameterized2           |   181|
+|29    |        Wrapped_GPIO                   |wb_gpio_port__parameterized2            |   181|
+|30    |          \GEN_SYNC_FFS[0].INPUT_SYNC  |gc_sync_ffs__parameterized0_5           |     5|
+|31    |          \GEN_SYNC_FFS[1].INPUT_SYNC  |gc_sync_ffs__parameterized0_6           |     4|
+|32    |          \GEN_SYNC_FFS[2].INPUT_SYNC  |gc_sync_ffs__parameterized0_7           |     4|
+|33    |          \GEN_SYNC_FFS[3].INPUT_SYNC  |gc_sync_ffs__parameterized0_8           |     4|
+|34    |          \GEN_SYNC_FFS[4].INPUT_SYNC  |gc_sync_ffs__parameterized0_9           |     4|
+|35    |          \GEN_SYNC_FFS[5].INPUT_SYNC  |gc_sync_ffs__parameterized0_10          |     4|
+|36    |          \GEN_SYNC_FFS[6].INPUT_SYNC  |gc_sync_ffs__parameterized0_11          |     4|
+|37    |          \GEN_SYNC_FFS[7].INPUT_SYNC  |gc_sync_ffs__parameterized0_12          |     4|
+|38    |      cmp_uart                         |xwb_simple_uart__parameterized0         |   139|
+|39    |        U_Wrapped_UART                 |wb_simple_uart__parameterized0          |   139|
+|40    |          U_WB_SLAVE                   |simple_uart_wb                          |    23|
+|41    |          \gen_phys_uart.U_BAUD_GEN    |uart_baud_gen__parameterized0           |    48|
+|42    |          \gen_phys_uart.U_RX          |uart_async_rx                           |    30|
+|43    |          \gen_phys_uart.U_TX          |uart_async_tx                           |    11|
+|44    |      cmp_xwb_tics                     |xwb_tics__parameterized0                |   345|
+|45    |        U_Tics                         |wb_tics__parameterized0                 |   345|
+|46    |  cmp_fmc_5chttl_1_periph              |fmc_dio5chttl__parameterized0           |   198|
+|47    |    cmp_IO                             |xwb_gpio_port__parameterized4           |   183|
+|48    |      Wrapped_GPIO                     |wb_gpio_port__parameterized4            |   183|
+|49    |        \GEN_SYNC_FFS[0].INPUT_SYNC    |gc_sync_ffs__parameterized0             |     5|
+|50    |        \GEN_SYNC_FFS[1].INPUT_SYNC    |gc_sync_ffs__parameterized0_0           |     5|
+|51    |        \GEN_SYNC_FFS[2].INPUT_SYNC    |gc_sync_ffs__parameterized0_1           |     4|
+|52    |        \GEN_SYNC_FFS[3].INPUT_SYNC    |gc_sync_ffs__parameterized0_2           |     5|
+|53    |        \GEN_SYNC_FFS[4].INPUT_SYNC    |gc_sync_ffs__parameterized0_3           |     4|
+|54    |  cmp_clk_gen                          |clk_gen                                 |     2|
+|55    |  cmp_spi_multiplexer                  |spi_multiplexer__parameterized0         |     6|
++------+---------------------------------------+----------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:58 ; elapsed = 00:01:02 . Memory (MB): peak = 664.723 ; gain = 504.012
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1798 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:51 . Memory (MB): peak = 664.723 ; gain = 172.938
+Synthesis Optimization Complete : Time (s): cpu = 00:00:58 ; elapsed = 00:01:02 . Memory (MB): peak = 664.723 ; gain = 504.012
+INFO: [Project 1-571] Translating synthesized netlist
+WARNING: [Netlist 29-345] The value of SIM_DEVICE on instance 'cmp_ram/U_DPRAM/gen_single_clk.U_RAM_SC/gen_with_byte_enable_readfirst.ram_reg_0' of type 'RAMB36E1' is 'VIRTEX6'; it is being changed to match the current FPGA architecture, '7SERIES'. For functional simulation to match hardware behavior, the value of SIM_DEVICE should be changed in the source netlist or constraint file.
+WARNING: [Netlist 29-345] The value of SIM_DEVICE on instance 'cmp_ram/U_DPRAM/gen_single_clk.U_RAM_SC/gen_with_byte_enable_readfirst.ram_reg_1' of type 'RAMB36E1' is 'VIRTEX6'; it is being changed to match the current FPGA architecture, '7SERIES'. For functional simulation to match hardware behavior, the value of SIM_DEVICE should be changed in the source netlist or constraint file.
+WARNING: [Netlist 29-345] The value of SIM_DEVICE on instance 'cmp_ram/U_DPRAM/gen_single_clk.U_RAM_SC/gen_with_byte_enable_readfirst.ram_reg_2' of type 'RAMB36E1' is 'VIRTEX6'; it is being changed to match the current FPGA architecture, '7SERIES'. For functional simulation to match hardware behavior, the value of SIM_DEVICE should be changed in the source netlist or constraint file.
+WARNING: [Netlist 29-345] The value of SIM_DEVICE on instance 'cmp_ram/U_DPRAM/gen_single_clk.U_RAM_SC/gen_with_byte_enable_readfirst.ram_reg_3' of type 'RAMB36E1' is 'VIRTEX6'; it is being changed to match the current FPGA architecture, '7SERIES'. For functional simulation to match hardware behavior, the value of SIM_DEVICE should be changed in the source netlist or constraint file.
+INFO: [Netlist 29-17] Analyzing 67 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 0 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 0 OBUFs to IO ports without IO buffers.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 30 instances were transformed.
+  IBUFGDS => IBUFDS: 1 instances
+  INV => LUT1: 16 instances
+  IOBUF => IOBUF (IBUF, OBUFT): 8 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS, OBUFDS): 5 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+238 Infos, 412 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:59 ; elapsed = 00:01:02 . Memory (MB): peak = 664.723 ; gain = 471.348
+# write_checkpoint -noxdef dbe_bpm_dsp.dcp
+# catch { report_utilization -file dbe_bpm_dsp_utilization_synth.rpt -pb dbe_bpm_dsp_utilization_synth.pb }
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.112 . Memory (MB): peak = 664.723 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 20 16:55:01 2015...

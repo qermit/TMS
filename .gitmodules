@@ -1,0 +1,11 @@
+[submodule "lobi-ip_cores"]
+	path = import/lobi-ip_cores
+	url = https://github.com/qermit/lobi-ip_cores.git
+	branch = master
+[submodule "fmc-hdl"]
+	path = import/fmc-hdl
+	url = https://github.com/qermit/fmc-hdl.git
+	branch = devel
+[submodule "general-cores"]
+	path = import/general-cores
+	url = https://github.com/qermit/general-cores.git

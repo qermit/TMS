@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<wave_config>
+	<wave_state>
+	</wave_state>
+	<db_ref_list>
+		<db_ref path="D:/Devel/projekty/TMS/lnls_out/tms_master/tms_master.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1" type="auto">
+			<top_modules>
+				<top_module name="top">
+				</top_module>
+			</top_modules>
+		</db_ref>
+	</db_ref_list>
+	<WVObjectSize size="31">
+	</WVObjectSize>
+	<wvobject fp_name="cbar_slave_i[0][adr]" type="array" db_ref_id="1">
+		<obj_property name="ElementShortName">cbar_slave_i[0][adr][31:0]</obj_property>
+		<obj_property name="ObjectShortName">cbar_slave_i[0][adr][31:0]</obj_property>
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="cbar_slave_i[0][dat]" type="array" db_ref_id="1">
+		<obj_property name="ElementShortName">cbar_slave_i[0][dat][31:0]</obj_property>
+		<obj_property name="ObjectShortName">cbar_slave_i[0][dat][31:0]</obj_property>
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="cbar_slave_o[0][dat]" type="array" db_ref_id="1">
+		<obj_property name="ElementShortName">cbar_slave_o[0][dat][31:0]</obj_property>
+		<obj_property name="ObjectShortName">cbar_slave_o[0][dat][31:0]</obj_property>
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="cbar_slave_i[0][cyc]" type="logic" db_ref_id="1">
+		<obj_property name="ElementShortName">cbar_slave_i[0][cyc]</obj_property>
+		<obj_property name="ObjectShortName">cbar_slave_i[0][cyc]</obj_property>
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="cbar_slave_i[0][stb]" type="logic" db_ref_id="1">
+		<obj_property name="ElementShortName">cbar_slave_i[0][stb]</obj_property>
+		<obj_property name="ObjectShortName">cbar_slave_i[0][stb]</obj_property>
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="cbar_slave_i[0][sel]" type="array" db_ref_id="1">
+		<obj_property name="ElementShortName">cbar_slave_i[0][sel][3:0]</obj_property>
+		<obj_property name="ObjectShortName">cbar_slave_i[0][sel][3:0]</obj_property>
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="cbar_slave_i[0][we]" type="logic" db_ref_id="1">
+		<obj_property name="ElementShortName">cbar_slave_i[0][we]</obj_property>
+		<obj_property name="ObjectShortName">cbar_slave_i[0][we]</obj_property>
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="cbar_slave_o[0][ack]" type="logic" db_ref_id="1">
+		<obj_property name="ElementShortName">cbar_slave_o[0][ack]</obj_property>
+		<obj_property name="ObjectShortName">cbar_slave_o[0][ack]</obj_property>
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="cbar_slave_o[0][err]" type="logic" db_ref_id="1">
+		<obj_property name="ElementShortName">cbar_slave_o[0][err]</obj_property>
+		<obj_property name="ObjectShortName">cbar_slave_o[0][err]</obj_property>
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="cbar_slave_o[0][rty]" type="logic" db_ref_id="1">
+		<obj_property name="ElementShortName">cbar_slave_o[0][rty]</obj_property>
+		<obj_property name="ObjectShortName">cbar_slave_o[0][rty]</obj_property>
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="cbar_slave_o[0][stall]" type="logic" db_ref_id="1">
+		<obj_property name="ElementShortName">cbar_slave_o[0][stall]</obj_property>
+		<obj_property name="ObjectShortName">cbar_slave_o[0][stall]</obj_property>
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="cbar_slave_o[0][int]" type="logic" db_ref_id="1">
+		<obj_property name="ElementShortName">cbar_slave_o[0][int]</obj_property>
+		<obj_property name="ObjectShortName">cbar_slave_o[0][int]</obj_property>
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="fmc1_dio_raw_o" type="array" db_ref_id="1">
+		<obj_property name="ElementShortName">fmc1_dio_raw_o[1:0]</obj_property>
+		<obj_property name="ObjectShortName">fmc1_dio_raw_o[1:0]</obj_property>
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="s_tick" type="logic" db_ref_id="1">
+		<obj_property name="ElementShortName">s_tick</obj_property>
+		<obj_property name="ObjectShortName">s_tick</obj_property>
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="s_trig" type="logic" db_ref_id="1">
+		<obj_property name="ElementShortName">s_trig</obj_property>
+		<obj_property name="ObjectShortName">s_trig</obj_property>
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="cbar_master_i[0][stall]" type="logic" db_ref_id="1">
+		<obj_property name="ElementShortName">cbar_master_i[0][stall]</obj_property>
+		<obj_property name="ObjectShortName">cbar_master_i[0][stall]</obj_property>
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="cbar_master_i[0][ack]" type="logic" db_ref_id="1">
+		<obj_property name="ElementShortName">cbar_master_i[0][ack]</obj_property>
+		<obj_property name="ObjectShortName">cbar_master_i[0][ack]</obj_property>
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="cbar_master_o[0][stb]" type="logic" db_ref_id="1">
+		<obj_property name="ElementShortName">cbar_master_o[0][stb]</obj_property>
+		<obj_property name="ObjectShortName">cbar_master_o[0][stb]</obj_property>
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="cbar_master_o[0][cyc]" type="logic" db_ref_id="1">
+		<obj_property name="ElementShortName">cbar_master_o[0][cyc]</obj_property>
+		<obj_property name="ObjectShortName">cbar_master_o[0][cyc]</obj_property>
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="cbar_master_i[2][stall]" type="logic" db_ref_id="1">
+		<obj_property name="ElementShortName">cbar_master_i[2][stall]</obj_property>
+		<obj_property name="ObjectShortName">cbar_master_i[2][stall]</obj_property>
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="cbar_master_i[2][ack]" type="logic" db_ref_id="1">
+		<obj_property name="ElementShortName">cbar_master_i[2][ack]</obj_property>
+		<obj_property name="ObjectShortName">cbar_master_i[2][ack]</obj_property>
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="cbar_master_o[2][stb]" type="logic" db_ref_id="1">
+		<obj_property name="ElementShortName">cbar_master_o[2][stb]</obj_property>
+		<obj_property name="ObjectShortName">cbar_master_o[2][stb]</obj_property>
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="cbar_master_o[2][cyc]" type="logic" db_ref_id="1">
+		<obj_property name="ElementShortName">cbar_master_o[2][cyc]</obj_property>
+		<obj_property name="ObjectShortName">cbar_master_o[2][cyc]</obj_property>
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="cbar_master_i[1][stall]" type="logic" db_ref_id="1">
+		<obj_property name="ElementShortName">cbar_master_i[1][stall]</obj_property>
+		<obj_property name="ObjectShortName">cbar_master_i[1][stall]</obj_property>
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="cbar_master_i[1][ack]" type="logic" db_ref_id="1">
+		<obj_property name="ElementShortName">cbar_master_i[1][ack]</obj_property>
+		<obj_property name="ObjectShortName">cbar_master_i[1][ack]</obj_property>
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="cbar_master_o[1][stb]" type="logic" db_ref_id="1">
+		<obj_property name="ElementShortName">cbar_master_o[1][stb]</obj_property>
+		<obj_property name="ObjectShortName">cbar_master_o[1][stb]</obj_property>
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="cbar_master_o[1][cyc]" type="logic" db_ref_id="1">
+		<obj_property name="ElementShortName">cbar_master_o[1][cyc]</obj_property>
+		<obj_property name="ObjectShortName">cbar_master_o[1][cyc]</obj_property>
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="s_diag_spi_si" type="logic" db_ref_id="1">
+		<obj_property name="ElementShortName">s_diag_spi_si</obj_property>
+		<obj_property name="ObjectShortName">s_diag_spi_si</obj_property>
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="s_diag_spi_clk" type="logic" db_ref_id="1">
+		<obj_property name="ElementShortName">s_diag_spi_clk</obj_property>
+		<obj_property name="ObjectShortName">s_diag_spi_clk</obj_property>
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="s_diag_spi_so" type="logic" db_ref_id="1">
+		<obj_property name="ElementShortName">s_diag_spi_so</obj_property>
+		<obj_property name="ObjectShortName">s_diag_spi_so</obj_property>
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="s_diag_spi_cs" type="logic" db_ref_id="1">
+		<obj_property name="ElementShortName">s_diag_spi_cs</obj_property>
+		<obj_property name="ObjectShortName">s_diag_spi_cs</obj_property>
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+</wave_config>
+
