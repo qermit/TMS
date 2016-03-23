@@ -1,7 +1,7 @@
 -- Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2014.4 (win64) Build 1071353 Tue Nov 18 18:24:04 MST 2014
--- Date        : Fri Nov 20 16:53:53 2015
+-- Date        : Wed Mar 23 14:26:38 2016
 -- Host        : SDPC117 running 64-bit Service Pack 1  (build 7601)
 -- Command     : write_vhdl -force -mode synth_stub
 --               D:/Devel/projekty/TMS/lnls_out/tms_master/tms_master.srcs/sources_1/ip/vio_boot/vio_boot_stub.vhdl

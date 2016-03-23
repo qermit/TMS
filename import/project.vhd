@@ -1,7 +1,8 @@
 library ieee;
-use work.wishbone_pkg.all;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
+
+use work.wishbone_pkg.all;
 
 package sdb_meta_pkg is
 

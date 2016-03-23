@@ -5,6 +5,7 @@ use ieee.numeric_std.all;
 library work;
 use work.dbe_wishbone_pkg.all;
 use work.wishbone_pkg.all;
+use work.wishbone_gsi_lobi_pkg.all;
 
 entity wb_dbe_periph is
 generic(
@@ -76,21 +77,25 @@ architecture rtl of wb_dbe_periph is
   constant c_masters                        : natural := 1;            -- Top master.
 
   -- WB SDB (Self describing bus) layout
-  constant c_layout : t_sdb_record_array(c_slaves-1 downto 0) :=
-  ( 0 => f_sdb_embed_device(c_xwb_uart_sdb,             x"00000000"),   -- UART
-    1 => f_sdb_embed_device(c_xwb_gpio32_sdb,           x"00000100"),   -- LEDs
-    2 => f_sdb_embed_device(c_xwb_gpio32_sdb,           x"00000200"),   -- Buttons
-    3 => f_sdb_embed_device(c_xwb_tics_counter_sdb,     x"00000300"),    -- TICs counter
-    4 => f_sdb_embed_device(c_xwb_gpio32_sdb,           x"00000400")    -- MLVDS
+  constant c_layout_req : t_sdb_record_array(c_slaves-1 downto 0) :=
+  ( 0 => f_sdb_auto_device(c_xwb_uart_sdb,             true),   -- UART
+    1 => f_sdb_auto_device(c_xwb_gpio32_sdb,           true),   -- LEDs
+    2 => f_sdb_auto_device(c_xwb_gpio32_sdb,           true),   -- Buttons
+    3 => f_sdb_auto_device(c_xwb_tics_counter_sdb,     true),    -- TICs counter
+    4 => f_sdb_auto_device(c_xwb_gpio32_sdb,           true)    -- MLVDS
   );
 
+  -- @todo: export sdb layouts to pkg files  
+  constant c_layout : t_sdb_record_array(c_slaves-1 downto 0) := f_sdb_auto_layout(c_layout_req);
   -- Self Describing Bus ROM Address. It will be an addressed slave as well.
-  constant c_sdb_address                    : t_wishbone_address := x"00000500";
+  constant c_sdb_address                    : t_wishbone_address := f_sdb_auto_sdb(c_layout_req);
 
   signal cbar_slave_in                      : t_wishbone_slave_in_array (c_masters-1 downto 0);
   signal cbar_slave_out                     : t_wishbone_slave_out_array(c_masters-1 downto 0);
   signal cbar_master_in                     : t_wishbone_master_in_array(c_slaves-1 downto 0);
   signal cbar_master_out                    : t_wishbone_master_out_array(c_slaves-1 downto 0);
+  
+  signal zeros: std_logic_vector(31 downto 0) := (others =>'0');
 
 component fmc_5chttl 
 generic (
@@ -167,7 +172,7 @@ begin
   );
 
   -- Slave 1 is the LED driver
-  cmp_leds : xwb_gpio_port
+  cmp_leds : xwb_gpio_raw
   generic map(
     g_interface_mode                        => PIPELINED,
     g_address_granularity                   => BYTE,
@@ -189,12 +194,12 @@ begin
     gpio_in_i                               => led_in_i,
     gpio_oen_o                              => led_oen_o,
     gpio_term_o                            => open,
-    raw_i => (others => '0'),
+    raw_i => zeros(g_num_leds-1 downto 0),
     raw_o => open
   );
 
   -- Slave 2 is the Button driver
-  cmp_buttons : xwb_gpio_port
+  cmp_buttons : xwb_gpio_raw
   generic map(
     g_interface_mode                        => PIPELINED,
     g_address_granularity                   => BYTE,
@@ -216,12 +221,12 @@ begin
     gpio_in_i                               => button_in_i,
     gpio_oen_o                              => button_oen_o,
     gpio_term_o                            => open,
-        raw_i => (others => '0'),
+        raw_i => zeros(g_num_buttons-1 downto 0),
         raw_o => open
   );
 
   -- Slave 3 is the TICs counter
-  cmp_xwb_tics : xwb_tics
+  cmp_xwb_tics : xwb_tics_adv
   generic map(
     g_interface_mode                        => PIPELINED,
     g_address_granularity                   => WORD,
@@ -244,7 +249,7 @@ begin
   );
 
 
-  cmp_mlvds : xwb_gpio_port
+  cmp_mlvds : xwb_gpio_raw
   generic map(
     g_interface_mode                        => PIPELINED,
     g_address_granularity                   => BYTE,
@@ -263,7 +268,7 @@ begin
     gpio_b                                  => mlvds_io,
     gpio_oen_o                              => mlvds_dir_o,
     gpio_term_o                             => open,
-    gpio_in_i                               => (others => '0'),
+    gpio_in_i                               => zeros(7 downto 0),
     
     raw_o => mlvds_raw_in_o,
     raw_i => mlvds_raw_out_i

@@ -120,126 +120,117 @@ set_property IOSTANDARD LVCMOS15 [get_ports {mlvds_dir_o[7]}]
 # Output 0 (negate)
 ##// LA29_CC_N
 ##// LA29_CC_P
-set_property PACKAGE_PIN P9 [get_ports {fmc1_out[LA_p][29]}]
-set_property IOSTANDARD LVDS_25 [get_ports {fmc1_out[LA_p][29]}]
+set_property PACKAGE_PIN P9 [get_ports {fmc1_inout[LA_p][29]}]
+set_property IOSTANDARD LVDS_25 [get_ports {fmc1_inout[LA_p][29]}]
 
-set_property PACKAGE_PIN P8 [get_ports {fmc1_out[LA_n][29]}]
-set_property IOSTANDARD LVDS_25 [get_ports {fmc1_out[LA_n][29]}]
+set_property PACKAGE_PIN P8 [get_ports {fmc1_inout[LA_n][29]}]
+set_property IOSTANDARD LVDS_25 [get_ports {fmc1_inout[LA_n][29]}]
 
 ##// LA28_CC_P
 ##// LA28_CC_N
-set_property PACKAGE_PIN T8 [get_ports {fmc1_out[LA_p][28]}]
-set_property IOSTANDARD LVDS_25 [get_ports {fmc1_out[LA_p][28]}]
-set_property PACKAGE_PIN T7 [get_ports {fmc1_out[LA_n][28]}]
-set_property IOSTANDARD LVDS_25 [get_ports {fmc1_out[LA_n][28]}]
+set_property PACKAGE_PIN T8 [get_ports {fmc1_inout[LA_p][28]}]
+set_property IOSTANDARD LVDS_25 [get_ports {fmc1_inout[LA_p][28]}]
+set_property PACKAGE_PIN T7 [get_ports {fmc1_inout[LA_n][28]}]
+set_property IOSTANDARD LVDS_25 [get_ports {fmc1_inout[LA_n][28]}]
 
 ##// LA08_CC_P
-set_property PACKAGE_PIN F3 [get_ports {fmc1_out[LA_p][8]}]
-set_property IOSTANDARD LVDS_25 [get_ports {fmc1_out[LA_p][8]}]
+set_property PACKAGE_PIN F3 [get_ports {fmc1_inout[LA_p][8]}]
+set_property IOSTANDARD LVDS_25 [get_ports {fmc1_inout[LA_p][8]}]
 ##// LA08_CC_N
-set_property PACKAGE_PIN F2 [get_ports {fmc1_out[LA_n][8]}]
-set_property IOSTANDARD LVDS_25 [get_ports {fmc1_out[LA_n][8]}]
+set_property PACKAGE_PIN F2 [get_ports {fmc1_inout[LA_n][8]}]
+set_property IOSTANDARD LVDS_25 [get_ports {fmc1_inout[LA_n][8]}]
 
 ##// LA07_CC_P
-set_property PACKAGE_PIN K3 [get_ports {fmc1_out[LA_p][7]}]
-set_property IOSTANDARD LVDS_25 [get_ports {fmc1_out[LA_p][7]}]
+set_property PACKAGE_PIN K3 [get_ports {fmc1_inout[LA_p][7]}]
+set_property IOSTANDARD LVDS_25 [get_ports {fmc1_inout[LA_p][7]}]
 ##// LA07_CC_N
-set_property PACKAGE_PIN K2 [get_ports {fmc1_out[LA_n][7]}]
-set_property IOSTANDARD LVDS_25 [get_ports {fmc1_out[LA_n][7]}]
+set_property PACKAGE_PIN K2 [get_ports {fmc1_inout[LA_n][7]}]
+set_property IOSTANDARD LVDS_25 [get_ports {fmc1_inout[LA_n][7]}]
 
 # Output 4 (negate)
 ##// LA04_CC_N
-set_property PACKAGE_PIN K1 [get_ports {fmc1_out[LA_p][4]}]
-set_property IOSTANDARD LVDS_25 [get_ports {fmc1_out[LA_p][4]}]
+set_property PACKAGE_PIN K1 [get_ports {fmc1_inout[LA_p][4]}]
+set_property IOSTANDARD LVDS_25 [get_ports {fmc1_inout[LA_p][4]}]
 ##// LA004CC_P
-set_property PACKAGE_PIN J1 [get_ports {fmc1_out[LA_n][4]}]
-set_property IOSTANDARD LVDS_25 [get_ports {fmc1_out[LA_n][4]}]
+set_property PACKAGE_PIN J1 [get_ports {fmc1_inout[LA_n][4]}]
+set_property IOSTANDARD LVDS_25 [get_ports {fmc1_inout[LA_n][4]}]
 
 # inputs
 # Input 0 ( negate )
 ##// LA33_CC_P
-set_property PACKAGE_PIN U2 [get_ports {fmc1_in[LA_p][33]}]
-set_property IOSTANDARD LVDS_25 [get_ports {fmc1_in[LA_p][33]}]
+set_property PACKAGE_PIN U2 [get_ports {fmc1_inout[LA_p][33]}]
+set_property IOSTANDARD LVDS_25 [get_ports {fmc1_inout[LA_p][33]}]
 ##// LA33_CC_N
-set_property PACKAGE_PIN U1 [get_ports {fmc1_in[LA_n][33]}]
-set_property IOSTANDARD LVDS_25 [get_ports {fmc1_in[LA_n][33]}]
+set_property PACKAGE_PIN U1 [get_ports {fmc1_inout[LA_n][33]}]
+set_property IOSTANDARD LVDS_25 [get_ports {fmc1_inout[LA_n][33]}]
 
 # Input 1
 ##// LA20_CC_P (negate )
-set_property PACKAGE_PIN R10 [get_ports {fmc1_in[LA_p][20]}]
-set_property IOSTANDARD LVDS_25 [get_ports {fmc1_in[LA_p][20]}]
+set_property PACKAGE_PIN R10 [get_ports {fmc1_inout[LA_p][20]}]
+set_property IOSTANDARD LVDS_25 [get_ports {fmc1_inout[LA_p][20]}]
 ##// LA20_CC_N
-set_property PACKAGE_PIN P10 [get_ports {fmc1_in[LA_n][20]}]
-set_property IOSTANDARD LVDS_25 [get_ports {fmc1_in[LA_n][20]}]
+set_property PACKAGE_PIN P10 [get_ports {fmc1_inout[LA_n][20]}]
+set_property IOSTANDARD LVDS_25 [get_ports {fmc1_inout[LA_n][20]}]
 
 #input 2
 ##// LA16_CC_P
-set_property PACKAGE_PIN L10 [get_ports {fmc1_in[LA_p][16]}]
-set_property IOSTANDARD LVDS_25 [get_ports {fmc1_in[LA_p][16]}]
+set_property PACKAGE_PIN L10 [get_ports {fmc1_inout[LA_p][16]}]
+set_property IOSTANDARD LVDS_25 [get_ports {fmc1_inout[LA_p][16]}]
 ##// LA16_CC_N
-set_property PACKAGE_PIN L9 [get_ports {fmc1_in[LA_n][16]}]
-set_property IOSTANDARD LVDS_25 [get_ports {fmc1_in[LA_n][16]}]
+set_property PACKAGE_PIN L9 [get_ports {fmc1_inout[LA_n][16]}]
+set_property IOSTANDARD LVDS_25 [get_ports {fmc1_inout[LA_n][16]}]
 
 # Input 3 (negate)
 ##// LA03_CC_P
-set_property PACKAGE_PIN H1 [get_ports {fmc1_in[LA_p][3]}]
-set_property IOSTANDARD LVDS_25 [get_ports {fmc1_in[LA_p][3]}]
+set_property PACKAGE_PIN H1 [get_ports {fmc1_inout[LA_p][3]}]
+set_property IOSTANDARD LVDS_25 [get_ports {fmc1_inout[LA_p][3]}]
 ##// LA03_CC_N
-set_property PACKAGE_PIN G1 [get_ports {fmc1_in[LA_n][3]}]
-set_property IOSTANDARD LVDS_25 [get_ports {fmc1_in[LA_n][3]}]
+set_property PACKAGE_PIN G1 [get_ports {fmc1_inout[LA_n][3]}]
+set_property IOSTANDARD LVDS_25 [get_ports {fmc1_inout[LA_n][3]}]
 
 # Input 4
 ##// LA00_CC_P
-set_property PACKAGE_PIN K7 [get_ports {fmc1_in[LA_p][0]}]
-set_property IOSTANDARD LVDS_25 [get_ports {fmc1_in[LA_p][0]}]
+set_property PACKAGE_PIN K7 [get_ports {fmc1_inout[LA_p][0]}]
+set_property IOSTANDARD LVDS_25 [get_ports {fmc1_inout[LA_p][0]}]
 ##// LA00_CC_N
-set_property PACKAGE_PIN K6 [get_ports {fmc1_in[LA_n][0]}]
-set_property IOSTANDARD LVDS_25 [get_ports {fmc1_in[LA_n][0]}]
+set_property PACKAGE_PIN K6 [get_ports {fmc1_inout[LA_n][0]}]
+set_property IOSTANDARD LVDS_25 [get_ports {fmc1_inout[LA_n][0]}]
 
 
 
 # Output enable 0
 ##// LA30_CC_P
-set_property PACKAGE_PIN N1 [get_ports {fmc1_out[LA_p][30]}]
-set_property IOSTANDARD LVCMOS25 [get_ports {fmc1_out[LA_p][30]}]
+
+set_property IOSTANDARD LVCMOS25 [get_ports {fmc1_inout[LA_p][30]}]
 # Output enable 1
 ##// LA24_CC_N
-set_property PACKAGE_PIN M11 [get_ports {fmc1_out[LA_n][24]}]
-set_property IOSTANDARD LVCMOS25 [get_ports {fmc1_out[LA_n][24]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {fmc1_inout[LA_n][24]}]
 # Output enable 2
 ##// LA15_CC_N
-set_property PACKAGE_PIN K11 [get_ports {fmc1_out[LA_n][15]}]
-set_property IOSTANDARD LVCMOS25 [get_ports {fmc1_out[LA_n][15]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {fmc1_inout[LA_n][15]}]
 # Output enable 3
 ##// LA11_CC_P
-set_property PACKAGE_PIN L2 [get_ports {fmc1_out[LA_p][11]}]
-set_property IOSTANDARD LVCMOS25 [get_ports {fmc1_out[LA_p][11]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {fmc1_inout[LA_p][11]}]
 # Output enable 4
 ##// LA05_CC_P
-set_property PACKAGE_PIN H4 [get_ports {fmc1_out[LA_p][5]}]
-set_property IOSTANDARD LVCMOS25 [get_ports {fmc1_out[LA_p][5]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {fmc1_inout[LA_p][5]}]
 
 
 # Termination 0
 ##// LA30_CC_N
-set_property PACKAGE_PIN M1 [get_ports {fmc1_out[LA_n][30]}]
-set_property IOSTANDARD LVCMOS25 [get_ports {fmc1_out[LA_n][30]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {fmc1_inout[LA_n][30]}]
 # Termination 1
 ##// LA06_CC_N
-set_property PACKAGE_PIN L5 [get_ports {fmc1_out[LA_n][6]}]
-set_property IOSTANDARD LVCMOS25 [get_ports {fmc1_out[LA_n][6]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {fmc1_inout[LA_n][6]}]
 # Termination 2
 ##// LA05_CC_N
-set_property PACKAGE_PIN H3 [get_ports {fmc1_out[LA_n][5]}]
-set_property IOSTANDARD LVCMOS25 [get_ports {fmc1_out[LA_n][5]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {fmc1_inout[LA_n][5]}]
 # Termination 3
 ##// LA09_CC_P
-set_property PACKAGE_PIN J4 [get_ports {fmc1_out[LA_p][9]}]
-set_property IOSTANDARD LVCMOS25 [get_ports {fmc1_out[LA_p][9]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {fmc1_inout[LA_p][9]}]
 # Termination 4
 ##// LA09_CC_N
-set_property PACKAGE_PIN J3 [get_ports {fmc1_out[LA_n][9]}]
-set_property IOSTANDARD LVCMOS25 [get_ports {fmc1_out[LA_n][9]}]
+set_property IOSTANDARD LVCMOS25 [get_ports {fmc1_inout[LA_n][9]}]
 
 ##// LA32_P
 #set_property PACKAGE_PIN AA34 [get_ports fmc2_trig_val_p_b]
@@ -1060,26 +1051,26 @@ create_clock -period 10.000 -name clk_sys [get_pins cmp_sys_pll_inst/cmp_clkout0
 # A PERIOD placed on an internal net will result in a clock defined with an internal source. Any upstream source clock latency will not be analyzed
 create_clock -period 5.000 -name clk_200mhz [get_pins cmp_sys_pll_inst/cmp_clkout1_buf/O]
 
-# real jitter is about 22ps peak-to-peak
-create_clock -period 8.000 -name fmc1_adc0_clk_i [get_ports fmc1_adc0_clk_i]
-set_input_jitter fmc1_adc0_clk_i 0.050
-create_clock -period 8.000 -name fmc2_adc0_clk_i [get_ports fmc2_adc0_clk_i]
-set_input_jitter fmc2_adc0_clk_i 0.050
+## real jitter is about 22ps peak-to-peak
+#create_clock -period 8.000 -name fmc1_adc0_clk_i [get_ports fmc1_adc0_clk_i]
+#set_input_jitter fmc1_adc0_clk_i 0.050
+#create_clock -period 8.000 -name fmc2_adc0_clk_i [get_ports fmc2_adc0_clk_i]
+#set_input_jitter fmc2_adc0_clk_i 0.050
 
-create_clock -period 8.000 -name fmc1_adc1_clk_i [get_ports fmc1_adc1_clk_i]
-set_input_jitter fmc1_adc1_clk_i 0.050
-create_clock -period 8.000 -name fmc2_adc1_clk_i [get_ports fmc2_adc1_clk_i]
-set_input_jitter fmc2_adc1_clk_i 0.050
+#create_clock -period 8.000 -name fmc1_adc1_clk_i [get_ports fmc1_adc1_clk_i]
+#set_input_jitter fmc1_adc1_clk_i 0.050
+#create_clock -period 8.000 -name fmc2_adc1_clk_i [get_ports fmc2_adc1_clk_i]
+#set_input_jitter fmc2_adc1_clk_i 0.050
 
-create_clock -period 8.000 -name fmc1_adc2_clk_i [get_ports fmc1_adc2_clk_i]
-set_input_jitter fmc1_adc2_clk_i 0.050
-create_clock -period 8.000 -name fmc2_adc2_clk_i [get_ports fmc2_adc2_clk_i]
-set_input_jitter fmc2_adc2_clk_i 0.050
+#create_clock -period 8.000 -name fmc1_adc2_clk_i [get_ports fmc1_adc2_clk_i]
+#set_input_jitter fmc1_adc2_clk_i 0.050
+#create_clock -period 8.000 -name fmc2_adc2_clk_i [get_ports fmc2_adc2_clk_i]
+#set_input_jitter fmc2_adc2_clk_i 0.050
 
-create_clock -period 8.000 -name fmc1_adc3_clk_i [get_ports fmc1_adc3_clk_i]
-set_input_jitter fmc1_adc3_clk_i 0.050
-create_clock -period 8.000 -name fmc2_adc3_clk_i [get_ports fmc2_adc3_clk_i]
-set_input_jitter fmc2_adc3_clk_i 0.050
+#create_clock -period 8.000 -name fmc1_adc3_clk_i [get_ports fmc1_adc3_clk_i]
+#set_input_jitter fmc1_adc3_clk_i 0.050
+#create_clock -period 8.000 -name fmc2_adc3_clk_i [get_ports fmc2_adc3_clk_i]
+#set_input_jitter fmc2_adc3_clk_i 0.050
 
 
 #######################################################################
@@ -1125,7 +1116,7 @@ set_input_jitter fmc2_adc3_clk_i 0.050
 #set_input_delay -clock [get_clocks fmc2_adc3_clk_i] -min -add_delay 7.000  [get_ports {fmc2_adc3_data_i[*]}]
 
 # Pack all registers into IOBs for better timing
-set_property IOB TRUE [get_ports {fmc1_adc0_data_i[*] fmc1_adc1_data_i[*] fmc1_adc2_data_i[*] fmc1_adc3_data_i[*] fmc2_adc0_data_i[*] fmc2_adc1_data_i[*] fmc2_adc2_data_i[*] fmc2_adc3_data_i[*]}]
+#set_property IOB TRUE [get_ports {fmc1_adc0_data_i[*] fmc1_adc1_data_i[*] fmc1_adc2_data_i[*] fmc1_adc3_data_i[*] fmc2_adc0_data_i[*] fmc2_adc1_data_i[*] fmc2_adc2_data_i[*] fmc2_adc3_data_i[*]}]
 
 #######################################################################
 ##                          PCIe constraints                        ##
