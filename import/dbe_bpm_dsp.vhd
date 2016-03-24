@@ -1,20 +1,16 @@
 ------------------------------------------------------------------------------
--- Title      : Top DSP design
+-- Title      : TMS Master
 ------------------------------------------------------------------------------
--- Author     : Lucas Maziero Russo
--- Company    : CNPEM LNLS-DIG
--- Created    : 2013-09-01
--- Platform   : FPGA-generic
+-- Author     : Piotr Miedzik
+-- Company    : GSI
+-- Created    : 
+-- Platform   : AFCv2
 -------------------------------------------------------------------------------
 -- Description: Top design for testing the integration/control of the DSP with
--- FMC130M_4ch board
+-- FMC250M_4ch board
 -------------------------------------------------------------------------------
--- Copyright (c) 2012 CNPEM
+-- Copyright (c) 2016 GSI
 -- Licensed under GNU Lesser General Public License (LGPL) v3.0
--------------------------------------------------------------------------------
--- Revisions  :
--- Date        Version  Author          Description
--- 2013-09-01  1.0      lucas.russo        Created
 -------------------------------------------------------------------------------
 
 library ieee;
@@ -66,8 +62,6 @@ port(
   -- Reset Button
   -----------------------------------------
   sys_rst_button_n_i                         : in std_logic;
-
-  
   
   -- 20MHz boot clock, always active
   boot_clk_i                                 : in std_logic;
@@ -75,256 +69,37 @@ port(
   -----------------------------------------
   -- UART pins
   -----------------------------------------
-
   rs232_txd_o                                : out std_logic;
   rs232_rxd_i                                : in std_logic;
 
   -----------------------------
-  -- AFC Diagnostics
+  -- AFC-MMC SPI link
   -----------------------------
-
   diag_spi_cs_i                             : in std_logic;
   diag_spi_si_i                             : in std_logic;
   diag_spi_so_o                             : out std_logic;
   diag_spi_clk_i                            : in std_logic;
 
-
-  -- MLVDS
+  -- AMC Ethernet Port1
+  -- AMC Ethernet Port2
+  -- AMC Ethernet Port3
+  -- AMC Ethernet Port4
+  -- AMC FP1 
+  -- AMC FP2
+  -- MicroTCA Ports 14-17 ??
   mlvds_io                                  : inout std_logic_vector(7 downto 0);
   mlvds_dir_o                               : out std_logic_vector(7 downto 0);
 
---  -- FMC 5ch ttla
-  
---  fmc1_in_p : in std_logic_vector(4 downto 0);
---  fmc1_in_n : in std_logic_vector(4 downto 0);
---  fmc1_term_o : out std_logic_vector(4 downto 0);
-    
---  fmc1_oen_o : out std_logic_vector(4 downto 0);
---  fmc1_out_p : out std_logic_vector(4 downto 0);
---  fmc1_out_n : out std_logic_vector(4 downto 0);
-  
-  
-
---  -- FMC2 dio 5ch ttl a
+  -- FMC1 dio 5ch ttl a
   fmc1_in: in t_fmc_signals_in;
   fmc1_out: out t_fmc_signals_out;
   fmc1_inout: inout t_fmc_signals_bidir;
+
+  -- FMC2 EMPTY
+  -- fmc2_in: in t_fmc_signals_in;
+  -- fmc2_out: out t_fmc_signals_out;
+  -- fmc2_inout: inout t_fmc_signals_bidir;
   
---  fmc2_in: in t_fmc_signals_in;
---  fmc2_out: out t_fmc_signals_out;
-  
---  -----------------------------
---  -- FMC1_130m_4ch ports
---  -----------------------------
-
---  -- ADC LTC2208 interface
---  fmc1_adc_pga_o                             : out std_logic;
---  fmc1_adc_shdn_o                            : out std_logic;
---  fmc1_adc_dith_o                            : out std_logic;
---  fmc1_adc_rand_o                            : out std_logic;
-
---  -- ADC0 LTC2208
---  fmc1_adc0_clk_i                            : in std_logic;
---  fmc1_adc0_data_i                           : in std_logic_vector(c_num_adc_bits-1 downto 0);
---  fmc1_adc0_of_i                             : in std_logic; -- Unused
-
---  -- ADC1 LTC2208
---  fmc1_adc1_clk_i                            : in std_logic;
---  fmc1_adc1_data_i                           : in std_logic_vector(c_num_adc_bits-1 downto 0);
---  fmc1_adc1_of_i                             : in std_logic; -- Unused
-
---  -- ADC2 LTC2208
---  fmc1_adc2_clk_i                            : in std_logic;
---  fmc1_adc2_data_i                           : in std_logic_vector(c_num_adc_bits-1 downto 0);
---  fmc1_adc2_of_i                             : in std_logic; -- Unused
-
---  -- ADC3 LTC2208
---  fmc1_adc3_clk_i                            : in std_logic;
---  fmc1_adc3_data_i                           : in std_logic_vector(c_num_adc_bits-1 downto 0);
---  fmc1_adc3_of_i                             : in std_logic; -- Unused
-
---  ---- FMC General Status
---  --fmc1_prsnt_i                               : in std_logic;
---  --fmc1_pg_m2c_i                              : in std_logic;
---  --fmc1_clk_dir_i                             : in std_logic;
-
---  -- Trigger
---  fmc1_trig_dir_o                            : out std_logic;
---  fmc1_trig_term_o                           : out std_logic;
---  fmc1_trig_val_p_b                          : inout std_logic;
---  fmc1_trig_val_n_b                          : inout std_logic;
-
---  -- Si571 clock gen
---  fmc1_si571_scl_pad_b                       : inout std_logic;
---  fmc1_si571_sda_pad_b                       : inout std_logic;
---  fmc1_si571_oe_o                            : out std_logic;
-
---  -- AD9510 clock distribution PLL
---  fmc1_spi_ad9510_cs_o                       : out std_logic;
---  fmc1_spi_ad9510_sclk_o                     : out std_logic;
---  fmc1_spi_ad9510_mosi_o                     : out std_logic;
---  fmc1_spi_ad9510_miso_i                     : in std_logic;
-
---  fmc1_pll_function_o                        : out std_logic;
---  fmc1_pll_status_i                          : in std_logic;
-
---  -- AD9510 clock copy
---  fmc1_fpga_clk_p_i                          : in std_logic;
---  fmc1_fpga_clk_n_i                          : in std_logic;
-
---  -- Clock reference selection (TS3USB221)
---  fmc1_clk_sel_o                             : out std_logic;
-
---  -- EEPROM (Connected to the CPU)
---  --eeprom_scl_pad_b                          : inout std_logic;
---  --eeprom_sda_pad_b                          : inout std_logic;
---  fmc1_eeprom_scl_pad_b                     : inout std_logic;
---  fmc1_eeprom_sda_pad_b                     : inout std_logic;
-
---  -- Temperature monitor (LM75AIMM)
---  fmc1_lm75_scl_pad_b                       : inout std_logic;
---  fmc1_lm75_sda_pad_b                       : inout std_logic;
-
---  fmc1_lm75_temp_alarm_i                     : in std_logic;
-
---  -- FMC LEDs
---  fmc1_led1_o                                : out std_logic;
---  fmc1_led2_o                                : out std_logic;
---  fmc1_led3_o                                : out std_logic;
-
---  -----------------------------
---  -- FMC2_130m_4ch ports
---  -----------------------------
-
---  -- ADC LTC2208 interface
---  fmc2_adc_pga_o                             : out std_logic;
---  fmc2_adc_shdn_o                            : out std_logic;
---  fmc2_adc_dith_o                            : out std_logic;
---  fmc2_adc_rand_o                            : out std_logic;
-
---  -- ADC0 LTC2208
---  fmc2_adc0_clk_i                            : in std_logic;
---  fmc2_adc0_data_i                           : in std_logic_vector(c_num_adc_bits-1 downto 0);
---  fmc2_adc0_of_i                             : in std_logic; -- Unused
-
---  -- ADC1 LTC2208
---  fmc2_adc1_clk_i                            : in std_logic;
---  fmc2_adc1_data_i                           : in std_logic_vector(c_num_adc_bits-1 downto 0);
---  fmc2_adc1_of_i                             : in std_logic; -- Unused
-
---  -- ADC2 LTC2208
---  fmc2_adc2_clk_i                            : in std_logic;
---  fmc2_adc2_data_i                           : in std_logic_vector(c_num_adc_bits-1 downto 0);
---  fmc2_adc2_of_i                             : in std_logic; -- Unused
-
---  -- ADC3 LTC2208
---  fmc2_adc3_clk_i                            : in std_logic;
---  fmc2_adc3_data_i                           : in std_logic_vector(c_num_adc_bits-1 downto 0);
---  fmc2_adc3_of_i                             : in std_logic; -- Unused
-
---  ---- FMC General Status
---  --fmc2_prsnt_i                               : in std_logic;
---  --fmc2_pg_m2c_i                              : in std_logic;
---  --fmc2_clk_dir_i                             : in std_logic;
-
---  -- Trigger
---  fmc2_trig_dir_o                            : out std_logic;
---  fmc2_trig_term_o                           : out std_logic;
---  fmc2_trig_val_p_b                          : inout std_logic;
---  fmc2_trig_val_n_b                          : inout std_logic;
-
---  -- Si571 clock gen
---  fmc2_si571_scl_pad_b                       : inout std_logic;
---  fmc2_si571_sda_pad_b                       : inout std_logic;
---  fmc2_si571_oe_o                            : out std_logic;
-
---  -- AD9510 clock distribution PLL
---  fmc2_spi_ad9510_cs_o                       : out std_logic;
---  fmc2_spi_ad9510_sclk_o                     : out std_logic;
---  fmc2_spi_ad9510_mosi_o                     : out std_logic;
---  fmc2_spi_ad9510_miso_i                     : in std_logic;
-
---  fmc2_pll_function_o                        : out std_logic;
---  fmc2_pll_status_i                          : in std_logic;
-
---  -- AD9510 clock copy
---  fmc2_fpga_clk_p_i                          : in std_logic;
---  fmc2_fpga_clk_n_i                          : in std_logic;
-
---  -- Clock reference selection (TS3USB221)
---  fmc2_clk_sel_o                             : out std_logic;
-
---  -- EEPROM (Connected to the CPU)
---  --eeprom_scl_pad_b                          : inout std_logic;
---  --eeprom_sda_pad_b                          : inout std_logic;
-
---  -- Temperature monitor (LM75AIMM)
---  fmc2_lm75_scl_pad_b                       : inout std_logic;
---  fmc2_lm75_sda_pad_b                       : inout std_logic;
-
---  fmc2_lm75_temp_alarm_i                     : in std_logic;
-
---  -- FMC LEDs
---  fmc2_led1_o                                : out std_logic;
---  fmc2_led2_o                                : out std_logic;
---  fmc2_led3_o                                : out std_logic;
-
-  -----------------------------------------
-  -- Position Calc signals
-  -----------------------------------------
-
-  -- Uncross signals
-  --clk_swap_o                                 : out std_logic;
-  --clk_swap2x_o                               : out std_logic;
-  --flag1_o                                    : out std_logic;
-  --flag2_o                                    : out std_logic;
-
-  -----------------------------------------
-  -- General board status
-  -----------------------------------------
-  --fmc_mmcm_lock_led_o                       : out std_logic;
-  --fmc_pll_status_led_o                      : out std_logic
-
-  -----------------------------------------
-  -- PCIe pins
-  -----------------------------------------
-
---  -- DDR3 memory pins
---  ddr3_dq_b                                 : inout std_logic_vector(c_ddr_dq_width-1 downto 0);
---  ddr3_dqs_p_b                              : inout std_logic_vector(c_ddr_dqs_width-1 downto 0);
---  ddr3_dqs_n_b                              : inout std_logic_vector(c_ddr_dqs_width-1 downto 0);
---  ddr3_addr_o                               : out   std_logic_vector(c_ddr_row_width-1 downto 0);
---  ddr3_ba_o                                 : out   std_logic_vector(c_ddr_bank_width-1 downto 0);
---  ddr3_cs_n_o                               : out   std_logic_vector(0 downto 0);
---  ddr3_ras_n_o                              : out   std_logic;
---  ddr3_cas_n_o                              : out   std_logic;
---  ddr3_we_n_o                               : out   std_logic;
---  ddr3_reset_n_o                            : out   std_logic;
---  ddr3_ck_p_o                               : out   std_logic_vector(c_ddr_ck_width-1 downto 0);
---  ddr3_ck_n_o                               : out   std_logic_vector(c_ddr_ck_width-1 downto 0);
---  ddr3_cke_o                                : out   std_logic_vector(c_ddr_cke_width-1 downto 0);
---  ddr3_dm_o                                 : out   std_logic_vector(c_ddr_dm_width-1 downto 0);
---  ddr3_odt_o                                : out   std_logic_vector(c_ddr_odt_width-1 downto 0);
-
---  -- PCIe transceivers
---  pci_exp_rxp_i                             : in  std_logic_vector(c_pcie_lanes - 1 downto 0);
---  pci_exp_rxn_i                             : in  std_logic_vector(c_pcie_lanes - 1 downto 0);
---  pci_exp_txp_o                             : out std_logic_vector(c_pcie_lanes - 1 downto 0);
---  pci_exp_txn_o                             : out std_logic_vector(c_pcie_lanes - 1 downto 0);
-
---  -- PCI clock and reset signals
---  pcie_clk_p_i                              : in std_logic;
---  pcie_clk_n_i                              : in std_logic
-
-  -----------------------------------------
-  -- Button pins
-  -----------------------------------------
-  --buttons_i                                 : in std_logic_vector(7 downto 0);
-
-  -----------------------------------------
-  -- User LEDs
-  -----------------------------------------
-  --leds_o                                    : out std_logic_vector(7 downto 0)
   vadj2_clk_updaten_o                        : inout std_logic
 );
 end dbe_bpm_dsp;
@@ -499,8 +274,6 @@ architecture rtl of dbe_bpm_dsp is
   signal sys_clk_gen                        : std_logic;
   signal sys_clk_gen_bufg                   : std_logic;
 
-
-
   -- GPIO LED signals
   signal gpio_slave_led_o                   : t_wishbone_slave_out;
   signal gpio_slave_led_i                   : t_wishbone_slave_in;
@@ -521,46 +294,7 @@ architecture rtl of dbe_bpm_dsp is
   signal dbg_serial_data                    : std_logic_vector(31 downto 0);
   signal dbg_spi_data                       : std_logic_vector(31 downto 0);
 
-  -- Chipscope control signals
-  signal CONTROL0                           : std_logic_vector(35 downto 0);
-  signal CONTROL1                           : std_logic_vector(35 downto 0);
-  signal CONTROL2                           : std_logic_vector(35 downto 0);
-  signal CONTROL3                           : std_logic_vector(35 downto 0);
-  signal CONTROL4                           : std_logic_vector(35 downto 0);
-
-  -- Chipscope ILA 0 signals
-  signal TRIG_ILA0_0                        : std_logic_vector(31 downto 0);
-  signal TRIG_ILA0_1                        : std_logic_vector(31 downto 0);
-  signal TRIG_ILA0_2                        : std_logic_vector(31 downto 0);
-  signal TRIG_ILA0_3                        : std_logic_vector(31 downto 0);
-
-  -- Chipscope ILA 1 signals
-  signal TRIG_ILA1_0                        : std_logic_vector(31 downto 0);
-  signal TRIG_ILA1_1                        : std_logic_vector(31 downto 0);
-  signal TRIG_ILA1_2                        : std_logic_vector(31 downto 0);
-  signal TRIG_ILA1_3                        : std_logic_vector(31 downto 0);
-
-  -- Chipscope ILA 2 signals
-  signal TRIG_ILA2_0                        : std_logic_vector(31 downto 0);
-  signal TRIG_ILA2_1                        : std_logic_vector(31 downto 0);
-  signal TRIG_ILA2_2                        : std_logic_vector(31 downto 0);
-  signal TRIG_ILA2_3                        : std_logic_vector(31 downto 0);
-
-  -- Chipscope ILA 3 signals
-  signal TRIG_ILA3_0                        : std_logic_vector(31 downto 0);
-  signal TRIG_ILA3_1                        : std_logic_vector(31 downto 0);
-  signal TRIG_ILA3_2                        : std_logic_vector(31 downto 0);
-  signal TRIG_ILA3_3                        : std_logic_vector(31 downto 0);
-
-  -- Chipscope ILA 4 signals
-  signal TRIG_ILA4_0                        : std_logic_vector(31 downto 0);
-  signal TRIG_ILA4_1                        : std_logic_vector(31 downto 0);
-  signal TRIG_ILA4_2                        : std_logic_vector(31 downto 0);
-  signal TRIG_ILA4_3                        : std_logic_vector(31 downto 0);
-
-
   signal rst_async_n: std_logic;
-
   ---------------------------
   --      Components       --
   ---------------------------
@@ -618,15 +352,6 @@ architecture rtl of dbe_bpm_dsp is
     aclk                                    : in std_logic;
     m_axis_data_tvalid                      : out std_logic;
     m_axis_data_tdata                       : out std_logic_vector(31 downto 0)
-  );
-  end component;
-
-  component chipscope_icon_4_port
-  port (
-    CONTROL0                                : inout std_logic_vector(35 downto 0);
-    CONTROL1                                : inout std_logic_vector(35 downto 0);
-    CONTROL2                                : inout std_logic_vector(35 downto 0);
-    CONTROL3                                : inout std_logic_vector(35 downto 0)
   );
   end component;
 
